@@ -9,10 +9,12 @@ import java.util.List;
 
 @Entity
 @Data
-public class Asignatura {
+public class Historial_Académico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String Nombre;
-    private String Descripción;
+    private Integer idEstudiante;
+    private String curso;
+    private float calificacion;
+    private LocalDate fecha;
 }

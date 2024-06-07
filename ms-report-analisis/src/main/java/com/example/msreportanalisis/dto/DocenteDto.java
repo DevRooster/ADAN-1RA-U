@@ -1,17 +1,11 @@
-package com.example.msgestion_estudiantes.entity;
+package com.example.msreportanalisis.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.List;
 
-@Entity
 @Data
-public class Docente {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DocenteDto {
     private Integer id;
     private String Nombre;
     private String Apellido;
@@ -25,10 +19,5 @@ public class Docente {
     private LocalDate Fecha_Contratación;
     private String Estado;
 
-
-
-
-
-
-
+    private MatriculaDto Matricula;
 }

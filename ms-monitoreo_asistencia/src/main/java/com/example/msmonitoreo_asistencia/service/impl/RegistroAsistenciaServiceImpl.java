@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class RegistroAsistenciaServiceImpl implements RegistroAsistenciaService {
+public class    RegistroAsistenciaServiceImpl implements RegistroAsistenciaService {
     @Autowired
     private RegistroAsistenciaRepository registroAsistenciaRepository;
 
