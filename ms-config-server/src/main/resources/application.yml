@@ -1,4 +1,3 @@
-
 server:
   port: 7070
 
@@ -10,7 +9,11 @@ spring:
     config:
       server:
         git:
+<<<<<<< HEAD
           uri: https://github.com/EnriqueMV18/EVA-1RA-U.git # ruta del repositorio git
+=======
+          uri: https://github.com/EnriqueMV18/ADAN-1RA-U.git  # ruta del repositorio git
+>>>>>>> e4319e7ae481322272a5ec2d1d96f8506d72b0da
           searchPaths: config-data
           #username:
           #password:
