@@ -1,5 +1,4 @@
 server:
-  #port: 8190
   port: ${PORT:${SERVER_PORT:0}}
 springdoc:
   api-docs:
@@ -26,7 +25,6 @@ eureka:
   instance:
     #hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
 resilience4j.circuitbreaker:
   instances:
     productoListarPorIdCB:
@@ -47,7 +45,3 @@ resilience4j.circuitbreaker:
       waitDurationInOpenState: 5s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
-<<<<<<< HEAD:config-data/ms-gestionmatriculas-service.yml
-=======
-
->>>>>>> 55355f40088464dfc340c14306ab94af25fa7b91:config-data/ms-matricula-service.yml
