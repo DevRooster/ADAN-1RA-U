@@ -23,7 +23,6 @@ eureka:
     serviceUrl:
       #defaultZone: http://localhost:8090/eureka
       defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
-
   instance:
     #hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
@@ -48,3 +47,7 @@ resilience4j.circuitbreaker:
       waitDurationInOpenState: 5s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
+<<<<<<< HEAD:config-data/ms-gestionmatriculas-service.yml
+=======
+
+>>>>>>> 55355f40088464dfc340c14306ab94af25fa7b91:config-data/ms-matricula-service.yml
