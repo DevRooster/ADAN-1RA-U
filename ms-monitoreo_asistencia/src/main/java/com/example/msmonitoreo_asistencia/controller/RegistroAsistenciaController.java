@@ -91,6 +91,7 @@ public class RegistroAsistenciaController {
 
             // Guardar el archivo en el directorio base del proyecto
             String projectBaseDir = System.getProperty("user.dir");
+            System.out.println("projectBaseDir: "+projectBaseDir);
             String uploadDir = projectBaseDir + File.separator + "uploads";
             String filePath = uploadDir + File.separator + fileName;
             File dest = new File(filePath);
@@ -101,4 +102,5 @@ public class RegistroAsistenciaController {
             return "Error al subir el archivo: " + e.getMessage();
         }
     }
+
 }

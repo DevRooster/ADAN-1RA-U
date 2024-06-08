@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc20adc8-9954-49c4-80fb-e94102d4e8c0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ms-monitoreo_asistencia/src/main/java/com/example/msmonitoreo_asistencia/controller/RegistroAsistenciaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-monitoreo_asistencia/src/main/java/com/example/msmonitoreo_asistencia/controller/RegistroAsistenciaController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-8.1.10-Win32-vs16-x64\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2hZpKQFyNh0VWCvYYxHNc1EhtcT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MsConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsGatewayServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsGestionDocentesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsGestionEstudiantesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsGestionMatriculasApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsMonitoreoAsistenciaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MsRegistryServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Pictures/ADAN-1RA-U&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Pictures\ADAN-1RA-U\ms-monitoreo_asistencia" />
+      <recent name="C:\Users\User\Pictures\ADAN-1RA-U\ms-monitoreo_asistencia\src\main\java\com\example\msmonitoreo_asistencia" />
+      <recent name="C:\Users\User\Pictures\ADAN-1RA-U\ms-gestion_matriculas\src\main\java\com\example\msgestion_matriculas" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MsRegistryServerApplication">
+    <configuration name="MsConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msconfigserver.MsConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsGatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-gateway-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msgatewayserver.MsGatewayServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsGestionDocentesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-gestion_docentes" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msgestion_docentes.MsGestionDocentesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsGestionEstudiantesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-gestion_estudiantes" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msgestion_estudiantes.MsGestionEstudiantesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsGestionMatriculasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-gestion_matriculas" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msgestion_matriculas.MsGestionMatriculasApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsMonitoreoAsistenciaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-monitoreo_asistencial" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msmonitoreo_asistencia.MsMonitoreoAsistenciaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsRegistryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-registry-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msregistryserver.MsRegistryServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MsReportAnalisisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ms-report-analisis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msreportanalisis.MsReportAnalisisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc20adc8-9954-49c4-80fb-e94102d4e8c0" name="Changes" comment="" />
+      <created>1717811389117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717811389117</updated>
+      <workItem from="1717811390221" duration="1066000" />
+      <workItem from="1717812816659" duration="47000" />
+      <workItem from="1717814521746" duration="10646000" />
+      <workItem from="1717861656362" duration="74000" />
+      <workItem from="1717861738022" duration="74000" />
+      <workItem from="1717861819107" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
