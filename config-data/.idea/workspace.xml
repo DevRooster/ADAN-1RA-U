@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef3e7f13-1d85-4bf0-af59-10a3532fee89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/utils/PdfUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/utils/UserExcelExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/ReporteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-reporte-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-reporte-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/feign/MonitoreoAsistenciaFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/feign/MonitoreoAsistenciaFeign.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,7 @@
       <updated>1717725854549</updated>
       <workItem from="1717725856642" duration="1827000" />
       <workItem from="1717729866524" duration="294000" />
-      <workItem from="1717814880839" duration="1869000" />
+      <workItem from="1717814880839" duration="2954000" />
     </task>
     <servers />
   </component>
