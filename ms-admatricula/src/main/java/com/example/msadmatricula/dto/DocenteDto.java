@@ -19,5 +19,5 @@ public class DocenteDto {
     private LocalDate Fecha_Contratación;
     private String Estado;
 
-    private MatriculaDto Matricula;
+
 }
