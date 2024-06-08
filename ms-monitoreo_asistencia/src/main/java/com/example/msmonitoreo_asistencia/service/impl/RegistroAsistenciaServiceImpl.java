@@ -2,12 +2,11 @@ package com.example.msmonitoreo_asistencia.service.impl;
 
 
 import com.example.msmonitoreo_asistencia.dto.DocenteDto;
-import com.example.msmonitoreo_asistencia.dto.OtrasUgelDto;
-import com.example.msmonitoreo_asistencia.entity.Estudiante;
+import com.example.msmonitoreo_asistencia.dto.EstudianteDto;
 import com.example.msmonitoreo_asistencia.entity.RegistroAsistencia;
 
 import com.example.msmonitoreo_asistencia.feign.GestionDocenteFeign;
-import com.example.msmonitoreo_asistencia.feign.IntegracionInstitucionesFeign;
+import com.example.msmonitoreo_asistencia.feign.EstudianteFeign;
 import com.example.msmonitoreo_asistencia.repository.RegistroAsistenciaRepository;
 import com.example.msmonitoreo_asistencia.service.RegistroAsistenciaService;
 
@@ -18,14 +17,14 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class    RegistroAsistenciaServiceImpl implements RegistroAsistenciaService {
+public class RegistroAsistenciaServiceImpl implements RegistroAsistenciaService {
     @Autowired
     private RegistroAsistenciaRepository registroAsistenciaRepository;
 
     @Autowired
     private GestionDocenteFeign gestionDocenteFeign;
     @Autowired
-    private IntegracionInstitucionesFeign integracionInstitucionesFeign;
+    private EstudianteFeign estudianteFeign;
 
     @Override
     public List<RegistroAsistencia> lista() {
@@ -38,16 +37,21 @@ public class    RegistroAsistenciaServiceImpl implements RegistroAsistenciaServi
     }
 
     @Override
-    public Optional<RegistroAsistencia> buscarPorId(Integer id)  {
+    public Optional<RegistroAsistencia> buscarPorId(Integer id) {
         Optional<RegistroAsistencia> registroAsistencia = registroAsistenciaRepository.findById(id);
-        DocenteDto docenteDto = gestionDocenteFeign.buscarPorId(registroAsistencia.get().getDocenteId()).getBody();
-        List<Estudiante> estudiantes = registroAsistencia.get().getDetalleEstudiantes().stream().map(estudiante -> {
-            estudiante.setOtrasUgelDto(integracionInstitucionesFeign.buscarPorId(estudiante.getOtrasUgelId()).getBody());
-            return estudiante;
-        }).toList();
-        registroAsistencia.get().setDocenteDto(docenteDto);
-        registroAsistencia.get().setDetalleEstudiantes(estudiantes);
-        return registroAsistenciaRepository.findById(id);
+
+        if (registroAsistencia.isPresent()) {
+            RegistroAsistencia asistencia = registroAsistencia.get();
+
+            DocenteDto docenteDto = gestionDocenteFeign.buscarPorId(asistencia.getDocenteid()).getBody();
+            EstudianteDto estudianteDto = estudianteFeign.buscarPorId(asistencia.getEstudianteid()).getBody();
+
+            asistencia.setDocenteDto(docenteDto);
+            asistencia.setEstudianteDto(estudianteDto);
+
+            return Optional.of(asistencia);
+        }
+        return Optional.empty();
     }
 
     @Override
