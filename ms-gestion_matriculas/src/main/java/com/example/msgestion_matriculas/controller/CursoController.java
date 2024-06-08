@@ -1,16 +1,18 @@
 package com.example.msgestion_matriculas.controller;
 
+
 import com.example.msgestion_matriculas.entity.Curso;
 import com.example.msgestion_matriculas.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/curso")
 public class CursoController {
-@Autowired
+    @Autowired
     private CursoService cursoService;
 
     @GetMapping

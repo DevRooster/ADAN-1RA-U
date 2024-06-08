@@ -1,10 +1,10 @@
 package com.example.msgestion_matriculas.entity;
 
-import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -12,16 +12,13 @@ public class Matricula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "estudiante_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Estudiante estudiante;
+    private LocalDate fechaMatricula;
+    private String estado;
+    private Integer Estudianteid;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "curso_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Curso curso;
 
-    private Date fechaMatriculacion;
-    private String estadoMatricula;
 }

@@ -1,10 +1,12 @@
 package com.example.msgestion_matriculas.controller;
 
+
 import com.example.msgestion_matriculas.entity.Matricula;
 import com.example.msgestion_matriculas.service.MatriculaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController

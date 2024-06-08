@@ -1,15 +1,15 @@
-package com.example.msgestion_matriculas.service.impl;
+package com.example.msgestion_matriculas.service.Impl;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.example.msgestion_matriculas.entity.Curso;
 import com.example.msgestion_matriculas.repository.CursoRepository;
 import com.example.msgestion_matriculas.service.CursoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 @Service
 public class CursoServiceImpl implements CursoService {
     @Autowired

@@ -1,8 +1,11 @@
 package com.example.msgestion_matriculas.service;
 
+
+
+import com.example.msgestion_matriculas.entity.Matricula;
+
 import java.util.List;
 import java.util.Optional;
-import com.example.msgestion_matriculas.entity.Matricula;
 
 public interface MatriculaService {
     public List<Matricula> listar();
