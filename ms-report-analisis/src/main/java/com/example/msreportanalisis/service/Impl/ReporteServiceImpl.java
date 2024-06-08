@@ -6,32 +6,32 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.msreportanalisis.entity.Mensaje;
-import com.example.msreportanalisis.repository.MensajeRepository;
-import com.example.msreportanalisis.service.MensajeService;
+import com.example.msreportanalisis.entity.Reporte;
+import com.example.msreportanalisis.repository.ReporteRepository;
+import com.example.msreportanalisis.service.ReporteService;
 
 @Service
-public class MensajeServiceImpl implements MensajeService{
+public class ReporteServiceImpl implements ReporteService {
     @Autowired
-    private MensajeRepository mensajeRepository;
+    private ReporteRepository mensajeRepository;
 
     @Override
-    public List<Mensaje> listar() {
+    public List<Reporte> listar() {
         return mensajeRepository.findAll();
     }
 
     @Override
-    public Mensaje guardar(Mensaje mensaje) {
+    public Reporte guardar(Reporte mensaje) {
         return mensajeRepository.save(mensaje);
     }
 
     @Override
-    public Optional<Mensaje> buscarPorId(Integer id) {
+    public Optional<Reporte> buscarPorId(Integer id) {
         return mensajeRepository.findById(id);
     }
 
     @Override
-    public Mensaje actualizar(Mensaje mensaje) {
+    public Reporte actualizar(Reporte mensaje) {
         return mensajeRepository.save(mensaje);
     }
 
