@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface EstudiantesFeign {
     @GetMapping("/{id}")
     @CircuitBreaker(name = "estudiantePorIdCB", fallbackMethod = "fallbackEstudiante")
-    public ResponseEntity<EstudianteDto> buscarPorId(@PathVariable(required = true) Integer id) ;
+    public ResponseEntity<EstudianteDto> ebuscarPorId(@PathVariable(required = true) Integer id) ;
     default ResponseEntity<EstudianteDto> fallbackEstudiante (Integer id, Exception e) {
 
         return ResponseEntity.ok(new EstudianteDto());

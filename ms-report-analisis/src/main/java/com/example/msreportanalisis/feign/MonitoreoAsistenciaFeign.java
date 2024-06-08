@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface MonitoreoAsistenciaFeign {
     @GetMapping("/{id}")
     @CircuitBreaker(name = "monitoreoPorIdCB", fallbackMethod = "fallbackRegistroAsistencia")
-    public ResponseEntity<RegistroAsistenciaDto> buscarPorId(@PathVariable(required = true) Integer id) ;
+    public ResponseEntity<RegistroAsistenciaDto> mbuscarPorId(@PathVariable(required = true) Integer id) ;
     default ResponseEntity<RegistroAsistenciaDto> fallbackRegistroAsistencia (Integer id, Exception e) {
 
         return ResponseEntity.ok(new RegistroAsistenciaDto());
