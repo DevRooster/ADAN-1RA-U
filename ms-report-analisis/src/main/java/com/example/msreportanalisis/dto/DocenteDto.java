@@ -5,19 +5,14 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class DocenteDto {
+public class    DocenteDto {
     private Integer id;
-    private String Nombre;
-    private String Apellido;
-    private LocalDate Fecha_Nacimiento;
-    private String Género;
-    private String CorreoElectronico;
-    private String Teléfono;
-    private String Dirección;
-    private String Especialidad;
-    private String ExperienciaLaboral;
-    private LocalDate Fecha_Contratación;
-    private String Estado;
+    private String nombre;
+    private LocalDate fechaNacimiento;
+    private String direccion;
+    private String telefono;
+    private String email;
+    private String especialidad;
 
     private MatriculaDto Matricula;
 }

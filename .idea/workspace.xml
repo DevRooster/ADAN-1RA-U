@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc20adc8-9954-49c4-80fb-e94102d4e8c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ms-monitoreo_asistencia/src/main/java/com/example/msmonitoreo_asistencia/controller/RegistroAsistenciaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-monitoreo_asistencia/src/main/java/com/example/msmonitoreo_asistencia/controller/RegistroAsistenciaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-data/.idea/config-data.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/controller/CursoAsignadoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/repository/CursoAsignadoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/service/CursoAsignadoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/service/impl/CursoAsignadoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/controller/AsignaturaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/controller/EvaluaciónController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/entity/Asignatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/entity/CursoAsignado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/entity/Docente.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/entity/Docente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/entity/Evaluación.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/repository/AsignaturaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/repository/EvaluaciónRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/service/AsignaturaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/service/EvaluaciónService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/service/impl/AsignaturaServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_docentes/src/main/java/com/example/msgestion_docentes/service/impl/EvaluaciónServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/entity/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/entity/Estudiante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/entity/Historial_Académico.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-gestion_estudiantes/src/main/java/com/example/msgestion_estudiantes/entity/Historial_Académico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-gestion_matriculas/src/main/java/com/example/msgestion_matriculas/entity/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-gestion_matriculas/src/main/java/com/example/msgestion_matriculas/entity/Curso.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +179,7 @@
       <workItem from="1717861656362" duration="74000" />
       <workItem from="1717861738022" duration="74000" />
       <workItem from="1717861819107" duration="18000" />
+      <workItem from="1717867046538" duration="7000" />
     </task>
     <servers />
   </component>

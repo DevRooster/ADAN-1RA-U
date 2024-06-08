@@ -1,9 +1,11 @@
 package com.example.msgestion_estudiantes.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,11 +20,10 @@ public class Estudiante {
     private String email;
     private String gradoActual;
 
-
-
-
-
-
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "estudiante_id")
+    private List<Historial_Académico> historialAcadémicos;
 
 
 }

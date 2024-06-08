@@ -66,7 +66,7 @@ public class UserExcelExporter {
             int columnCount = 0;
 
             createCell(row, columnCount++, reporte.getId(), style);
-            createCell(row, columnCount++, reporte.getContenido(), style);
+            createCell(row, columnCount++, reporte.getTipo(), style);
         }
     }
 

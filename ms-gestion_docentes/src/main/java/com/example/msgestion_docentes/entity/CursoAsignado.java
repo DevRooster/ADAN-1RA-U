@@ -4,17 +4,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
-import java.util.List;
-
 @Entity
 @Data
-public class Asignatura {
+public class CursoAsignado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String Nombre;
-    private String Descripción;
+    private Integer Cursoid;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "docente_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private Docente docente;
 
 
 

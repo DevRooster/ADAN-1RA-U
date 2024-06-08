@@ -8,10 +8,10 @@ import java.util.Date;
 @Data
 public class MatriculaDto {
     private Integer id;
-    private Date fechaMatriculacion;
-    private String estadoMatricula;
+    private LocalDate fechaMatricula;
+    private String estado;
 
-    private EstudianteDto estudiante;
+    private EstudianteDto estudianteDto;
 
 
 }

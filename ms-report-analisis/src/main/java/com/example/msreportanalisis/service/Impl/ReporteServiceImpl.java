@@ -7,7 +7,7 @@ import com.example.msreportanalisis.dto.DocenteDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.msreportanalisis.feign.DocentesFeign;
+
 
 import com.example.msreportanalisis.entity.Reporte;
 import com.example.msreportanalisis.repository.ReporteRepository;

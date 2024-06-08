@@ -1,5 +1,6 @@
 package com.example.msgestion_matriculas.entity;
 
+import com.example.msgestion_matriculas.feign.DocentesFeign;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -22,4 +23,5 @@ public class Curso {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "curso_id")
     private List<Matricula> matriculas;
+
 }

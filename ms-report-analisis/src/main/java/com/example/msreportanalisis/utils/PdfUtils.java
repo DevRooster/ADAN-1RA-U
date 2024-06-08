@@ -20,7 +20,7 @@ public class PdfUtils {
         // Map<String, Object> firstRow = queryResults.get(0);
         for (Reporte reporte :reportes) {
             Font boldFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
-            Paragraph paragraph = new Paragraph(reporte.getContenido(), boldFont);
+            Paragraph paragraph = new Paragraph(reporte.getTipo(), boldFont);
             document.add(paragraph);
         }
         document.add(new Paragraph("\n"));

@@ -8,15 +8,15 @@ import java.util.Date;
 @Data
 public class RegistroAsistenciaDto {
     private Integer id;
-    private Integer DocenteId;
-    private Integer estudiante_id;
-    private Integer clase_id;
-    private String estado_asistencia;
-    private LocalDate fecha_asistencia;
+    private LocalDate fecha;
+    private String estado;
     private String observaciones;
 
-    private DocenteDto docente;
-    private EstudianteDto estudiante;
+    private Integer Estudianteid;
+    private Integer Docenteid;
+
+    private DocenteDto docenteDto;
+    private EstudianteDto estudianteDto;
 
 
 
