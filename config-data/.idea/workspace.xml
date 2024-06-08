@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef3e7f13-1d85-4bf0-af59-10a3532fee89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/ReporteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/entity/Reporte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-report-analisis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/DestinatarioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/MensajeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/NotificacionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/entity/Destinatario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/entity/Mensaje.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/entity/Notificacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/repository/DestinatarioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/repository/MensajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/repository/ReporteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/repository/NotificacionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/DestinatarioService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/Impl/DestinatarioServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/Impl/MensajeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/Impl/ReporteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/Impl/NotificacionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/MensajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/ReporteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/service/NotificacionService.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/utils/PdfUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/utils/UserExcelExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-report-analisis/src/main/java/com/example/msreportanalisis/controller/ReporteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
