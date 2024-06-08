@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms-gestiondocentes-service
+    name: ms-gestionestudiantes-service
   profiles:
     active: development
   config:

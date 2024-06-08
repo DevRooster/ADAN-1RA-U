@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef3e7f13-1d85-4bf0-af59-10a3532fee89" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gestion_estudiantes/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="f557c758-076f-4ba2-9444-7cdec7d1984b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,20 +13,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2hX1wwjWwmQdziUA6PrRm2DJjwf" />
+  <component name="ProjectId" id="2hWtkbHHCpwcvgiNQDpP55ceSHP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MsAdmatriculaApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/u1/ADAN-1RA-U/ms-admatricula&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -37,17 +48,36 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="MsAdmatriculaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" nameIsGenerated="true">
+      <module name="ms-admatricula" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.msadmatricula.MsAdmatriculaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef3e7f13-1d85-4bf0-af59-10a3532fee89" name="Changes" comment="" />
-      <created>1717725854549</created>
+      <changelist id="f557c758-076f-4ba2-9444-7cdec7d1984b" name="Changes" comment="" />
+      <created>1717721804979</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717725854549</updated>
-      <workItem from="1717725856642" duration="1827000" />
-      <workItem from="1717729866524" duration="294000" />
-      <workItem from="1717814880839" duration="513000" />
+      <updated>1717721804979</updated>
+      <workItem from="1717721806097" duration="90000" />
+      <workItem from="1717722493482" duration="1984000" />
+      <workItem from="1717725839224" duration="1848000" />
+      <workItem from="1717727722054" duration="1193000" />
+      <workItem from="1717783643993" duration="660000" />
+      <workItem from="1717811237467" duration="474000" />
     </task>
     <servers />
   </component>
