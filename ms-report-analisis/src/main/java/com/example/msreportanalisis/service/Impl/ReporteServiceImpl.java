@@ -3,11 +3,8 @@ package com.example.msreportanalisis.service.Impl;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.msreportanalisis.dto.DocenteDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-
 
 import com.example.msreportanalisis.entity.Reporte;
 import com.example.msreportanalisis.repository.ReporteRepository;
@@ -37,16 +34,6 @@ public class ReporteServiceImpl implements ReporteService {
     public Reporte actualizar(Reporte reporte) {
         return reporteRepository.save(reporte);
     }
-
-
-   // @Override
-   //  public Optional<Reporte> listarPorId(Integer id) {
-   //      Optional<Reporte> reporte = reporteRepository.findById(id);
-    //      DocenteDto docenteDto = DocentesFeign.dbuscarPorId(reporte.get().getDocenteId()).getBody();
-
-    //    reporte.get().setContenido(docenteDto);
-    //    return reporteRepository.findById(id);
-    //  }
 
     @Override
     public void eliminar(Integer id) {
