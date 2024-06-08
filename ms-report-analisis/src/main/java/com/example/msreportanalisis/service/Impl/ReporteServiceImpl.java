@@ -13,30 +13,30 @@ import com.example.msreportanalisis.service.ReporteService;
 @Service
 public class ReporteServiceImpl implements ReporteService {
     @Autowired
-    private ReporteRepository mensajeRepository;
+    private ReporteRepository reporteRepository;
 
     @Override
     public List<Reporte> listar() {
-        return mensajeRepository.findAll();
+        return reporteRepository.findAll();
     }
 
     @Override
-    public Reporte guardar(Reporte mensaje) {
-        return mensajeRepository.save(mensaje);
+    public Reporte guardar(Reporte reporte) {
+        return reporteRepository.save(reporte);
     }
 
     @Override
     public Optional<Reporte> buscarPorId(Integer id) {
-        return mensajeRepository.findById(id);
+        return reporteRepository.findById(id);
     }
 
     @Override
-    public Reporte actualizar(Reporte mensaje) {
-        return mensajeRepository.save(mensaje);
+    public Reporte actualizar(Reporte reporte) {
+        return reporteRepository.save(reporte);
     }
 
     @Override
     public void eliminar(Integer id) {
-        mensajeRepository.deleteById(id);
+        reporteRepository.deleteById(id);
     }
 }

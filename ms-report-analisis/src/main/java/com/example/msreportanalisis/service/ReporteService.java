@@ -7,11 +7,11 @@ import java.util.Optional;
 public interface ReporteService {
     public List<Reporte> listar();
     
-    public Reporte guardar(Reporte mensaje);
+    public Reporte guardar(Reporte reporte);
 
     public Optional<Reporte> buscarPorId(Integer id);
 
-    public Reporte actualizar(Reporte mensaje);
+    public Reporte actualizar(Reporte reporte);
 
     public void eliminar(Integer id);
 }
