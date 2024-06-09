@@ -17,7 +17,6 @@ spring:
     url: jdbc:mysql://localhost:3306/ms-monitoreoasistencia
     username: root
     password:
-
 eureka:
   client:
     serviceUrl:
@@ -26,6 +25,7 @@ eureka:
   instance:
     #hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
 resilience4j.circuitbreaker:
   instances:
     docenteListarPorIdCB:

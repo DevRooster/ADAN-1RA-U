@@ -24,7 +24,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 @RestController
-@RequestMapping("/registro_asistencia")
+@RequestMapping("/registroasistencia")
 public class RegistroAsistenciaController {
     @Autowired
     private RegistroAsistenciaService registroAsistenciaService;

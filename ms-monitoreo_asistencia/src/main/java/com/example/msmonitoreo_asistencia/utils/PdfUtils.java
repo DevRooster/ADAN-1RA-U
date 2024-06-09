@@ -19,7 +19,9 @@ public class PdfUtils {
        // Map<String, Object> firstRow = queryResults.get(0);
         for (RegistroAsistencia registroAsistencia :registroAsistencias) {
             Font boldFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
-            Paragraph paragraph = new Paragraph(registroAsistencia.getObservaciones(), boldFont);
+            Paragraph paragraph = new Paragraph(registroAsistencia.getEstado(), boldFont);
+            Paragraph paragraphFecha = new Paragraph("Fecha: " + registroAsistencia.getFecha());
+            document.add(paragraphFecha);
             document.add(paragraph);
         }
         document.add(new Paragraph("\n"));

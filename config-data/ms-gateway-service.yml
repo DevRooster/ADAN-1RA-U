@@ -17,42 +17,26 @@ spring:
         locator:
           enable: true
       routes:
-        - id: ms-monitoreoasistencia-service
-          uri: lb://ms-monitoreoasistencia-service
+        - id: ms-gestionestudiantes-service
+          uri: lb://ms-gestionestudiantes-service
           predicates:
-            - Path=/registro_asistencia/**
-          filters:
-            - AuthFilter
-        - id: ms-soporteasistencial-service
-          uri: lb://ms-soporteasistencial-service
-          predicates:
-            - Path=/registro_asistencia/**
-          filters:
-            - AuthFilter
+            - Path=/estudiante/**, /historialacadémico/**
         - id: ms-gestiondocentes-service
           uri: lb://ms-gestiondocentes-service
           predicates:
             - Path=/asignatura/**, /docente/**
-          filters:
-            - AuthFilter
+        - id: ms-monitoreoasistencia-service
+          uri: lb://ms-monitoreoasistencia-service
+          predicates:
+            - Path=/registroasistencia/**
         - id: ms-reporte-service
           uri: lb://ms-reporte-service
           predicates:
-            - Path=/reporte/**
-          filters:
-            - AuthFilter
-        - id: ms-gestionmatriculas-service
-          uri: lb://ms-gestionmatriculas-service
+            - Path=/reportes/**
+        - id: ms-matriculas-service
+          uri: lb://ms-matriculas-service
           predicates:
-            - Path=/matricula/**, /curso/**
-          filters:
-            - AuthFilter
-        - id: ms-matricula-service
-          uri: lb://ms-matricula-service
-          predicates:
-            - Path=/matricula/**, /curso/**
-          filters:
-            - AuthFilter
+            - Path=/cursos/**, /matriculas/**
         - id: ms-auth-service
           uri: lb://ms-auth-service
           predicates:
