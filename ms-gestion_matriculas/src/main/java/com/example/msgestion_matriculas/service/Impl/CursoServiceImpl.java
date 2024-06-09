@@ -16,7 +16,7 @@ public class CursoServiceImpl implements CursoService {
     private CursoRepository cursoRepository;
 
     @Override
-    public List<Curso> listar() {
+    public List<Curso> lista() {
         return cursoRepository.findAll();
     }
 

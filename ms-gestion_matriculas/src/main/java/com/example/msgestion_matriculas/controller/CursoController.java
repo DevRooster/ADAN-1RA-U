@@ -17,7 +17,7 @@ public class CursoController {
 
     @GetMapping
     public ResponseEntity<List<Curso>> listar() {
-        return ResponseEntity.ok(cursoService.listar());
+        return ResponseEntity.ok(cursoService.lista());
     }
 
     @PostMapping
@@ -39,6 +39,6 @@ public class CursoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<List<Curso>> eliminar(@PathVariable(required = true) Integer id) {
         cursoService.eliminar(id);
-        return ResponseEntity.ok(cursoService.listar());
+        return ResponseEntity.ok(cursoService.lista());
     }
 }

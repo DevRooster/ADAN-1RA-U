@@ -16,7 +16,7 @@ public class MatriculaServiceImpl implements MatriculaService {
     private MatriculaRepository matriculaRepository;
 
     @Override
-    public List<Matricula> listar() {
+    public List<Matricula> lista() {
         return matriculaRepository.findAll();
     }
 
