@@ -25,7 +25,7 @@ public class MatriculaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Matricula> buscarPOrId(@PathVariable(required = true) Integer id) {
+    public ResponseEntity<Matricula> buscarPorId(@PathVariable(required = true) Integer id) {
         return ResponseEntity.ok(matriculaService.buscarPorId(id).get());
     }
 
