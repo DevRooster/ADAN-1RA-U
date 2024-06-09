@@ -18,9 +18,9 @@ public class MsGestionMatriculasApplication {
 	@Bean
 	public OpenAPI custumOpenAPI(){
 		return new OpenAPI().info (new Info()
-				.title("OPEN API MICROSERVICIO GESTION DE DOCENTES")
+				.title("OPEN API MICROSERVICIO GESTION DE MATRICULA")
 				.version("0.0.1")
-				.description("servicio web gestion_docentes")
+				.description("servicio web gestion_matricula")
 				.termsOfService("http://swagger.io/terms")
 				.license (new License().name("Apache 2.0").url("http://springdoc.org"))
 		);
