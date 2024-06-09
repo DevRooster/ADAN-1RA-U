@@ -7,7 +7,7 @@ spring:
     show-sql: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ms-matricula
+    url: jdbc:mysql://localhost:3306/ms-auth
     username: root
     password:
 
