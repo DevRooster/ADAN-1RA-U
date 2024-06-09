@@ -1,8 +1,9 @@
-package com.example.msmonitoreo_asistencia.dto;
+package com.example.msadmatricula.dto;
 
 import lombok.Data;
 
 import java.time.LocalDate;
+
 @Data
 public class DocenteDto {
     private Integer id;
@@ -12,7 +13,6 @@ public class DocenteDto {
     private String telefono;
     private String email;
     private String especialidad;
-
 
 
 }

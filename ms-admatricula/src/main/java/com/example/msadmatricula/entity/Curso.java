@@ -1,11 +1,10 @@
-package com.example.msgestion_matriculas.entity;
+package com.example.msadmatricula.entity;
 
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 @Entity
@@ -23,5 +22,4 @@ public class Curso {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "curso_id")
     private List<Matricula> matriculas;
-
 }
