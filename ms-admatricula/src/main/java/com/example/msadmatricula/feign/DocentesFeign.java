@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "ms-gestiondocentes-service", path = "/docente")
 public interface DocentesFeign {
     @GetMapping("/{id}")
-    @CircuitBreaker(name = "docentePorIdCB", fallbackMethod = "fallbackDocente")
+    @CircuitBreaker(name = "docenteListarPorIdCB", fallbackMethod = "fallbackDocente")
     public ResponseEntity<DocenteDto> buscarPorId(@PathVariable(required = true) Integer id) ;
     default ResponseEntity<DocenteDto> fallbackDocente (Integer id, Exception e) {
 

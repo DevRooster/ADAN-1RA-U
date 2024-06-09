@@ -12,7 +12,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 @Component
-public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config>{
+public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> {
     private WebClient.Builder webClient;
 
 
@@ -49,5 +49,6 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config>{
 
 
     public static class Config {}
+
 
 }

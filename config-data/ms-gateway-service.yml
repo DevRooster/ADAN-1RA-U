@@ -1,6 +1,7 @@
 server:
   port: 82
 
+
 eureka:
   client:
     serviceUrl:
@@ -9,7 +10,6 @@ eureka:
   instance:
     #hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
 spring:
   cloud:
     gateway:
