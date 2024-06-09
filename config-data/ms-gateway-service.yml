@@ -17,59 +17,30 @@ spring:
         locator:
           enable: true
       routes:
-        - id: ms-integracioninstituciones-service
-          uri: lb://ms-integracioninstituciones-service
-          predicates:
-            - Path=/convenio_acuerdo/**, /datos_compartidos/**, /institucion_externa/**, /otra_ugel/**
         - id: ms-monitoreoasistencia-service
           uri: lb://ms-monitoreoasistencia-service
           predicates:
             - Path=/clase/**, /estudiante/**, /registro_asistencia/**
+          filters:
+            - AuthFilter
         - id: ms-soporteasistencial-service
           uri: lb://ms-soporteasistencial-service
           predicates:
             - Path=/historialsoporte/**, /incidente/**, /solicitud_soporte/**
-
-
-        - id: ms-gestioninfraestructura-service
-          uri: lb://ms-gestioninfraestructura-service
-          predicates:
-            - Path=/aula/**, /edificio/**, /equipo/** , /mantenimiento/**
-
-        - id: ms-gestionfinanciera-service
-          uri: lb://ms-gestionfinanciera-service
-          predicates:
-            - Path=/cuenta/**, /egreso/**, /ingreso/** , /transaccion/**
-
-        - id: ms-comunicacionesAlertas-service
-          uri: lb://ms-comunicacionesAlertas-service
-          predicates:
-            - Path=/alerta/**, /grupo/**, /mensaje/** , /miembro_grupo/**
-
+          filters:
+            - AuthFilter
         - id: ms-gestiondocentes-service
           uri: lb://ms-gestiondocentes-service
           predicates:
             - Path=/asignatura/**, /docente/**, /evaluación/**
-
-        - id: ms-gestioneventosactividades-service
-          uri: lb://ms-gestioneventosactividades-service
-          predicates:
-            - Path=/actividad_evento/**, /evento/**, /participante/**, /recurso_necesarios/**
-
-        - id: ms-planificacioncurricular-service
-          uri: lb://ms-planificacioncurricular-service
-          predicates:
-            - Path=/contenido_curricular/**, /curso/**, /docente_curso/**, /estudiante_curso/**, /plan_estudios/**
-
-        - id: ms-capacitacion-service
-          uri: lb://ms-capacitacion-service
-          predicates:
-            - Path=/capcurso/**, /certificado/**, /participante/**
+          filters:
+            - AuthFilter
         - id: ms-reporte-service
           uri: lb://ms-reporte-service
           predicates:
             - Path=/destinatario/**, /mensaje/**, /notificacion/**
-
+          filters:
+            - AuthFilter
         - id: ms-matricula-service
           uri: lb://ms-matricula-service
           predicates:
