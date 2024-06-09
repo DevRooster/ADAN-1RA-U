@@ -1,0 +1,64 @@
+server:
+  port: 880
+
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://localhost:8090/eureka
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
+  instance:
+    #hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: ms-monitoreoasistencia-service
+          uri: lb://ms-monitoreoasistencia-service
+          predicates:
+            - Path=/registro_asistencia/**
+          filters:
+            - AuthFilter
+        - id: ms-soporteasistencial-service
+          uri: lb://ms-soporteasistencial-service
+          predicates:
+            - Path=/registro_asistencia/**
+          filters:
+            - AuthFilter
+        - id: ms-gestiondocentes-service
+          uri: lb://ms-gestiondocentes-service
+          predicates:
+            - Path=/asignatura/**, /docente/**
+          filters:
+            - AuthFilter
+        - id: ms-reporte-service
+          uri: lb://ms-reporte-service
+          predicates:
+            - Path=/reporte/**
+          filters:
+            - AuthFilter
+        - id: ms-gestionmatriculas-service
+          uri: lb://ms-gestionmatriculas-service
+          predicates:
+            - Path=/matricula/**, /curso/**
+          filters:
+            - AuthFilter
+        - id: ms-matricula-service
+          uri: lb://ms-matricula-service
+          predicates:
+            - Path=/matricula/**, /curso/**
+          filters:
+            - AuthFilter
+        - id: ms-auth-service
+          uri: lb://ms-auth-service
+          predicates:
+            - Path=/auth/**
+
+
+
+
+
