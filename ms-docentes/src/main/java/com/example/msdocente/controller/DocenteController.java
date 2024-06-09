@@ -10,7 +10,7 @@ import com.example.msdocente.service.DocenteService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/producto")
+@RequestMapping("/docente")
 public class DocenteController {
     @Autowired
     private DocenteService productoService;

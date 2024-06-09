@@ -8,7 +8,7 @@ import com.example.msdocente.service.CursoService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/docente")
+@RequestMapping("/curso")
 public class CursoController {
     @Autowired
     private CursoService cursoService;
