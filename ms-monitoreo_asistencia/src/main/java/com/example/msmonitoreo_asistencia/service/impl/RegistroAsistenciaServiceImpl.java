@@ -41,18 +41,21 @@ public class RegistroAsistenciaServiceImpl implements RegistroAsistenciaService 
         Optional<RegistroAsistencia> registroAsistencia = registroAsistenciaRepository.findById(id);
 
         if (registroAsistencia.isPresent()) {
-            RegistroAsistencia asistencia = registroAsistencia.get();
+            RegistroAsistencia registro = registroAsistencia.get();
 
-            DocenteDto docenteDto = gestionDocenteFeign.buscarPorId(asistencia.getDocenteid()).getBody();
-            EstudianteDto estudianteDto = estudianteFeign.buscarPorId(asistencia.getEstudianteid()).getBody();
+            // Obtener el DTO del docente
+            DocenteDto docenteDto = gestionDocenteFeign.buscarPorId(registro.getDocenteid()).getBody();
 
-            asistencia.setDocenteDto(docenteDto);
-            asistencia.setEstudianteDto(estudianteDto);
+            // Obtener el DTO del estudiante
+            EstudianteDto estudianteDto = estudianteFeign.buscarPorId(registro.getEstudianteid()).getBody();
 
-            return Optional.of(asistencia);
+            registro.setDocenteDto(docenteDto);
+            registro.setEstudianteDto(estudianteDto);
         }
-        return Optional.empty();
+
+        return registroAsistencia;
     }
+
 
     @Override
     public RegistroAsistencia actualizar(RegistroAsistencia registroAsistencia) {

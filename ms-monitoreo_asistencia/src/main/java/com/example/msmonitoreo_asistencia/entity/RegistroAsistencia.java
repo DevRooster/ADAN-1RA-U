@@ -24,4 +24,5 @@ public class RegistroAsistencia {
     private DocenteDto docenteDto ;
     @Transient
     private EstudianteDto estudianteDto ;
+
 }
