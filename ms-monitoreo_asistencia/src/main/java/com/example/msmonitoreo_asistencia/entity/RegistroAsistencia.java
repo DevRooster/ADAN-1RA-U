@@ -15,7 +15,7 @@ public class RegistroAsistencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-        private LocalDate fecha;
+    private LocalDate fecha;
     private String estado;
     private String observaciones;
     private Integer Estudianteid;
