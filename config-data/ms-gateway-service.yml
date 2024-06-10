@@ -37,6 +37,8 @@ spring:
           uri: lb://ms-matriculas-service
           predicates:
             - Path=/horarios/**, /matriculas/**
+          filters:
+            - AuthFilter
         - id: ms-auth-service
           uri: lb://ms-auth-service
           predicates:
