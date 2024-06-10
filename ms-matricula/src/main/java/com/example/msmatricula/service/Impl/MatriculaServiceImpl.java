@@ -36,12 +36,7 @@ public class MatriculaServiceImpl implements MatriculaService {
     public Optional<Matricula> buscarPorId(Integer id) {
         Optional<Matricula> matricula = matriculaRepository.findById(id);
         EstudianteDto estudianteDto = estudiantesFeign.buscarPorId(matricula.get().getEstudianteId()).getBody();
-        List<Horario> horarios = matricula.get().getDetallehorario().stream().map(horario -> {
-            horario.setEstudianteDto(estudiantesFeign.buscarPorId(horario.getEstudianteId()).getBody());
-            return horario;
-        }).toList();
         matricula.get().setEstudianteDto(estudianteDto);
-        matricula.get().setDetallehorario(horarios);
         return matriculaRepository.findById(id);
     }
     @Override
