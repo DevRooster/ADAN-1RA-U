@@ -13,7 +13,7 @@ public class Docente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nombre;
+    private String nombreCompleto;
     private LocalDate fechaNacimiento;
     private String direccion;
     private String telefono;

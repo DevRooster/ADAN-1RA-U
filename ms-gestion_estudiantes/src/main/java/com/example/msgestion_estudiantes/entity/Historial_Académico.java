@@ -14,9 +14,11 @@ public class Historial_Académico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer idEstudiante;
-    private String curso;
-    private float calificacion;
-    private LocalDate fecha;
+    private String institucion;
+    private String promedio;
+    private String observaciones;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "estudiante_id")

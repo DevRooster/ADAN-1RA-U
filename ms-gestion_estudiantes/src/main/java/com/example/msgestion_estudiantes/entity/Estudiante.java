@@ -15,10 +15,12 @@ public class Estudiante {
     private Integer id;
     private String nombre;
     private LocalDate fechaNacimiento;
+    private String DNI;
     private String direccion;
     private String telefono;
     private String email;
     private String gradoActual;
+
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)

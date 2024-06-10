@@ -1,5 +1,6 @@
 package com.example.msreporte.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -12,6 +13,7 @@ public class Reporte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private LocalDate fecha;
     private String tipo;
 
     // Relación con Destinatario (Uno a Muchos)

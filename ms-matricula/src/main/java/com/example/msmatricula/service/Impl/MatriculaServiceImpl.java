@@ -1,8 +1,6 @@
 package com.example.msmatricula.service.Impl;
 
 
-import com.example.msmatricula.dto.DocenteDto;
-import com.example.msmatricula.entity.Curso;
 import com.example.msmatricula.entity.Matricula;
 import com.example.msmatricula.feign.DocentesFeign;
 import com.example.msmatricula.feign.EstudiantesFeign;

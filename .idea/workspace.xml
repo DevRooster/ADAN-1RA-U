@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc20adc8-9954-49c4-80fb-e94102d4e8c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/src/main/java/com/example/msgatewayserver/MsGatewayServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/src/main/java/com/example/msgatewayserver/config/AuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/src/main/java/com/example/msgatewayserver/config/WebClientConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/src/main/java/com/example/msgatewayserver/dto/TokenDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway-server1/src/test/java/com/example/msgatewayserver/MsGatewayServerApplicationTests.java" beforeDir="false" />
-    </list>
+    <list default="true" id="fc20adc8-9954-49c4-80fb-e94102d4e8c0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +49,7 @@
     "Spring Boot.MsRegistryServerApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Pictures/copiar",
+    "last_opened_file_path": "C:/Users/User/Pictures/ADAN-1RA-U/ms-reporte",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -176,6 +162,7 @@
       <workItem from="1717867046538" duration="7000" />
       <workItem from="1717911637651" duration="93000" />
       <workItem from="1717919295204" duration="9000" />
+      <workItem from="1717957605657" duration="72000" />
     </task>
     <servers />
   </component>

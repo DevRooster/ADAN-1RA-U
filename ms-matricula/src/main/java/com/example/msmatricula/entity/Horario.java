@@ -10,13 +10,13 @@ import java.util.List;
 
 @Data
 @Entity
-public class Curso {
+public class Horario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
     private String descripcion;
-    private String periodo;
+    private String GradoDesigando;
 
     @Transient
     private DocenteDto docenteDto ;

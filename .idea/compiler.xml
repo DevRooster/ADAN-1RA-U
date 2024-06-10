@@ -8,12 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ms-gestion_estudiantes" />
-        <module name="ms-gestion_docentes" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ms-config-server" target="17" />
       <module name="ms-gateway-server" target="17" />
+      <module name="ms-gestion_docentes" target="17" />
       <module name="ms-gestion_matriculas" target="17" />
       <module name="ms-monitoreo_asistencial" target="17" />
       <module name="ms-registry-server" target="17" />
