@@ -1,6 +1,5 @@
 package com.example.msmatricula.entity;
 
-import com.example.msmatricula.dto.DocenteDto;
 import com.example.msmatricula.dto.EstudianteDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -17,9 +16,7 @@ public class Horario {
     private String nombre;
     private String descripcion;
     private String GradoDesigando;
-
-    @Transient
-    private DocenteDto docenteDto ;
+    private Integer matriculaid;
 
     @Transient
     private EstudianteDto estudianteDto ;

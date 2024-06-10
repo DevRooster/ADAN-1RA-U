@@ -16,8 +16,12 @@ public class Matricula {
     private Integer id;
     private LocalDate fechaMatricula;
     private String estado;
+    private Integer estudianteId;
 
     @Transient
     private EstudianteDto estudianteDto ;
-
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "venta_id")
+    private List<Horario> detallehorario;
 }

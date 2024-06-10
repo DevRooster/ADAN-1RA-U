@@ -1,8 +1,9 @@
 package com.example.msmatricula.service.Impl;
 
 
+import com.example.msmatricula.dto.EstudianteDto;
+import com.example.msmatricula.entity.Horario;
 import com.example.msmatricula.entity.Matricula;
-import com.example.msmatricula.feign.DocentesFeign;
 import com.example.msmatricula.feign.EstudiantesFeign;
 import com.example.msmatricula.repository.MatriculaRepository;
 import com.example.msmatricula.service.MatriculaService;
@@ -19,8 +20,7 @@ public class MatriculaServiceImpl implements MatriculaService {
     @Autowired
     private EstudiantesFeign estudiantesFeign;
 
-    @Autowired
-    private DocentesFeign docentesFeign;
+
     @Override
     public List<Matricula> lista() {
         return matriculaRepository.findAll();
@@ -34,9 +34,16 @@ public class MatriculaServiceImpl implements MatriculaService {
 
     @Override
     public Optional<Matricula> buscarPorId(Integer id) {
+        Optional<Matricula> matricula = matriculaRepository.findById(id);
+        EstudianteDto estudianteDto = estudiantesFeign.buscarPorId(matricula.get().getEstudianteId()).getBody();
+        List<Horario> horarios = matricula.get().getDetallehorario().stream().map(horario -> {
+            horario.setEstudianteDto(estudiantesFeign.buscarPorId(horario.getMatriculaid()).getBody());
+            return horario;
+        }).toList();
+        matricula.get().setEstudianteDto(estudianteDto);
+        matricula.get().setDetallehorario(horarios);
         return matriculaRepository.findById(id);
     }
-
     @Override
     public Matricula actualizar(Matricula matricula) {
         return matriculaRepository.save(matricula);
