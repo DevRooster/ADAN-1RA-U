@@ -9,6 +9,7 @@ public class EstudianteDto {
     private Integer id;
     private String nombre;
     private LocalDate fechaNacimiento;
+    private String DNI;
     private String direccion;
     private String telefono;
     private String email;
