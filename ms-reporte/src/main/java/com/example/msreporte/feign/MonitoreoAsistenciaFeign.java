@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "ms-monitoreoasistencia-service", path = "/registro_asistencia")
+@FeignClient(name = "ms-monitoreoasistencia-service", path = "/registroasistencia")
 public interface MonitoreoAsistenciaFeign {
     @GetMapping("/{id}")
     @CircuitBreaker(name = "monitoreoPorIdCB", fallbackMethod = "fallbackRegistroAsistencia")

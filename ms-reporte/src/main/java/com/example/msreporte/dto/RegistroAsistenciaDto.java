@@ -11,7 +11,6 @@ public class RegistroAsistenciaDto {
     private LocalDate fecha;
     private String estado;
     private String observaciones;
-
     private Integer Estudianteid;
     private Integer Docenteid;
 

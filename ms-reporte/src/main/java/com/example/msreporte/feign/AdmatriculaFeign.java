@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface AdmatriculaFeign {
     @GetMapping("/{id}")
     @CircuitBreaker(name = "admatriculaPorIdCB", fallbackMethod = "fallbackAdmatricula")
-    public ResponseEntity<MatriculaDto> BuscarPorId(@PathVariable(required = true) Integer id) ;
+    public ResponseEntity<MatriculaDto> buscarPorId(@PathVariable(required = true) Integer id) ;
     default ResponseEntity<MatriculaDto> fallbackAdmatricula (Integer id, Exception e) {
         MatriculaDto matriculaDto = new MatriculaDto();
         matriculaDto.setId(900000);
