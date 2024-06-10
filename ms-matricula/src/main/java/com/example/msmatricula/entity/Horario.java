@@ -13,7 +13,7 @@ public class Horario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nombre;
+    private String curso;
     private String descripcion;
     private String GradoDesigando;
     private Integer estudianteId;

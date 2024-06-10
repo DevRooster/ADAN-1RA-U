@@ -35,7 +35,9 @@ public class UserExcelExporter {
         style.setFont(font);
 
         createCell(row, 0, "ID", style);
-        createCell(row, 1, "Estado", style);
+        createCell(row, 1, "Fecha de Matricula", style);
+        createCell(row, 2, "Estado", style);
+        createCell(row, 3, "ID del Estudiante", style);
 
     }
 
@@ -64,8 +66,11 @@ public class UserExcelExporter {
             Row row = sheet.createRow(rowCount++);
             int columnCount = 0;
 
+
             createCell(row, columnCount++, matricula.getId(), style);
+            createCell(row, columnCount++, matricula.getFechaMatricula(), style);
             createCell(row, columnCount++, matricula.getEstado(), style);
+            createCell(row, columnCount++, matricula.getEstudianteId(), style);
         }
     }
 

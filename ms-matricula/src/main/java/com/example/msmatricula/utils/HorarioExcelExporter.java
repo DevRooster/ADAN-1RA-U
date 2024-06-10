@@ -35,7 +35,10 @@ public class HorarioExcelExporter {
         style.setFont(font);
 
         createCell(row, 0, "ID", style);
-        createCell(row, 1, "Nombre", style);
+        createCell(row, 1, "Curso", style);
+        createCell(row, 2, "Descripción", style);
+        createCell(row, 3, "Grado Designado", style);
+        createCell(row, 4, "ID del Estudiante", style);
 
 
     }
@@ -66,7 +69,11 @@ public class HorarioExcelExporter {
             int columnCount = 0;
 
             createCell(row, columnCount++, horario.getId(), style);
-            createCell(row, columnCount++, horario.getNombre(), style);
+            createCell(row, columnCount++, horario.getCurso(), style);
+            createCell(row, columnCount++, horario.getDescripcion(), style);
+            createCell(row, columnCount++, horario.getGradoDesigando(), style);
+            createCell(row, columnCount++, horario.getEstudianteId(), style);
+
         }
     }
 

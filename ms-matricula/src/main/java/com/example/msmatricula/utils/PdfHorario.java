@@ -1,14 +1,11 @@
 package com.example.msmatricula.utils;
 
-
-
 import com.example.msmatricula.entity.Horario;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
-
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 
@@ -18,42 +15,28 @@ public class PdfHorario {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PdfWriter.getInstance(document, outputStream);
         document.open();
-        // Write column names
-       // Map<String, Object> firstRow = queryResults.get(0);
-        for (Horario horario :horarios) {
-            Font boldFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
-            Paragraph paragraph = new Paragraph(horario.getNombre(), boldFont);
-            document.add(paragraph);
-            Paragraph paragraphDescripcion = new Paragraph("Descripcion: " + horario.getDescripcion());
-            document.add(paragraphDescripcion);
 
-            // Add GradoDesignado
-            Paragraph paragraphGradoDesignado = new Paragraph("Grado Designado: " + horario.getGradoDesigando());
-            document.add(paragraphGradoDesignado);
+        // Estilo de fuente en negrita
+        Font boldFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
 
-            // Add EstudianteId
-            Paragraph paragraphEstudianteId = new Paragraph("Estudiante ID: " + horario.getEstudianteId());
-            document.add(paragraphEstudianteId);
-
-            // Add EstudianteDto information if available
-            if (horario.getEstudianteDto() != null) {
-                Paragraph paragraphEstudianteNombre = new Paragraph("Estudiante Nombre: " + horario.getEstudianteDto().getNombre());
-                document.add(paragraphEstudianteNombre);
-
-                Paragraph paragraphEstudianteApellido = new Paragraph("Estudiante Apellido: " + horario.getEstudianteDto().getDireccion());
-                document.add(paragraphEstudianteApellido);
-            }
-        }
+        // Agregar título al documento
+        document.add(new Paragraph("Lista de Horarios", boldFont));
         document.add(new Paragraph("\n"));
-        // Write data rows
-       // for (Map<String, Object> row : queryResults) {
-            //for (Object value : row.values()) {
-            //    Paragraph paragraph2 = new Paragraph(value.toString());
-            //    document.add(paragraph2);
-           // }
-            document.add(new Paragraph("\n"));
-       // }
+
+        // Iterar sobre la lista de horarios
+        for (Horario horario : horarios) {
+            // Agregar los datos de cada horario
+            document.add(new Paragraph("ID: " + horario.getId()));
+            document.add(new Paragraph("Curso: " + horario.getCurso(), boldFont));
+            document.add(new Paragraph("Descripción: " + horario.getDescripcion()));
+            document.add(new Paragraph("Grado Designado: " + horario.getGradoDesigando()));
+            document.add(new Paragraph("ID del Estudiante: " + horario.getEstudianteId()));
+            document.add(new Paragraph("\n")); // Espacio entre registros
+        }
+
+        // Cerrar el documento
         document.close();
+
         return outputStream;
     }
 }
