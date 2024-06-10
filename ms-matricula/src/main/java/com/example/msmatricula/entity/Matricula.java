@@ -22,6 +22,6 @@ public class Matricula {
     private EstudianteDto estudianteDto ;
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "venta_id")
+    @JoinColumn(name = "hoarario_id")
     private List<Horario> detallehorario;
 }
