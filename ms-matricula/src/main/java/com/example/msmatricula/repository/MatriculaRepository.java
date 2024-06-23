@@ -1,8 +1,9 @@
 package com.example.msmatricula.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.msmatricula.entity.Matricula;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MatriculaRepository extends JpaRepository<Matricula, Integer> {
+    
 }

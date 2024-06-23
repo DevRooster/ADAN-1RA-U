@@ -1,5 +1,5 @@
 server:
-  port: 1010
+  port: 82
 
 
 eureka:
@@ -13,34 +13,48 @@ eureka:
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:5173"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
       discovery:
         locator:
           enable: true
       routes:
-        - id: ms-matricula-service
-          uri: lb://ms-matricula-service
+        - id: ms-gestionestudiantes-service
+          uri: lb://ms-gestionestudiantes-service
           predicates:
-            - Path=/inscripcion/**, /matricula/**
+            - Path=/estudiante/**, /historialacadémico/**
+        - id: ms-gestiondocentes-service
+          uri: lb://ms-gestiondocentes-service
+          predicates:
+            - Path=/asignatura/**, /docente/**
+        - id: ms-monitoreoasistencia-service
+          uri: lb://ms-monitoreoasistencia-service
+          predicates:
+            - Path=/registroasistencia/**
+        - id: ms-reporte-service
+          uri: lb://ms-reporte-service
+          predicates:
+            - Path=/reportes/**
+        - id: ms-matriculas-service
+          uri: lb://ms-matriculas-service
+          predicates:
+            - Path=/horarios/**, /matriculas/**
           filters:
             - AuthFilter
-
         - id: ms-auth-service
           uri: lb://ms-auth-service
           predicates:
             - Path=/auth/**
 
-        - id: ms-asistencia-service
-          uri: lb://ms-asistencia-service
-          predicates:
-            - Path=/asistencia/**
 
-        - id: ms-docente-service
-          uri: lb://ms-docente-service
-          predicates:
-            - Path=/docente/**, /curso/**
 
-        - id: ms-estudiante-service
-          uri: lb://ms-estudiante-service
-          predicates:
-            - Path=/estudiate/**, /perfil/**
+
 

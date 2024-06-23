@@ -18,7 +18,8 @@
             "mainClass": "com.example.msregistryserver.MsRegistryServerApplication",
             "projectName": "ms-registry-server",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=51236 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-registry-server"
         },
         {
             "type": "java",
@@ -37,46 +38,6 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "pe.upeu.auth.AuthApplication",
             "projectName": "auth-service",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-MsAsistenciaApplication<ms-asistencia>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.example.msasistencia.MsAsistenciaApplication",
-            "projectName": "ms-asistencia",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-MsDocenteApplication<ms-docente>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.example.msdocente.MsDocenteApplication",
-            "projectName": "ms-docente",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-MsEstudianteApplication<ms-estudiante>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.example.msestudiante.MsEstudianteApplication",
-            "projectName": "ms-estudiante",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-MsMatriculaApplication<ms-matricula>",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.example.msmatricula.MsMatriculaApplication",
-            "projectName": "ms-matricula",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
