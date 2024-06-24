@@ -10,13 +10,14 @@ public class CursoAsignado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer cursoid;
+    private String nombreCurso;
     private String horasAcademicas;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "docente_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Docente detallesDocente;
+
 
 
 

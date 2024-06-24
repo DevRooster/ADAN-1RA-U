@@ -2,6 +2,7 @@ package com.example.msgestiondocente.controller;
 
 
 
+import com.example.msgestiondocente.dto.CursoAsignadoDto;
 import com.example.msgestiondocente.entity.CursoAsignado;
 import com.example.msgestiondocente.service.CursoAsignadoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ public class CursoAsignadoController {
         return ResponseEntity.ok(cursoAsignadoService.lista());
     }
     @PostMapping
-    ResponseEntity<CursoAsignado> guardar(@RequestBody CursoAsignado cursoAsignado) {
-        return ResponseEntity.ok(cursoAsignadoService.guardar((cursoAsignado)));
+    ResponseEntity<CursoAsignado> guardar(@RequestBody CursoAsignadoDto cursoAsignadoDto) {
+        return ResponseEntity.ok(cursoAsignadoService.guardar((cursoAsignadoDto)));
     }
 
     @GetMapping("/{id}")
@@ -31,8 +32,8 @@ public class CursoAsignadoController {
     }
 
     @PutMapping
-    ResponseEntity<CursoAsignado> actualizar(@RequestBody CursoAsignado cursoAsignado){
-        return ResponseEntity.ok(cursoAsignadoService.actualizar((cursoAsignado)));
+    ResponseEntity<CursoAsignado> actualizar(@RequestBody CursoAsignadoDto cursoAsignadoDto){
+        return ResponseEntity.ok(cursoAsignadoService.actualizar((cursoAsignadoDto)));
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<List<CursoAsignado>> eleminar(@PathVariable(required = true) Integer id){
