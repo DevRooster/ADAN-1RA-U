@@ -83,3 +83,43 @@
 .card-body {
   padding: 20px; /* Espaciado interno */
 }
+
+/*Tabla*/
+.table-custom {
+  background-color: #000; /* Fondo negro */
+  border: 2px solid #28a745; /* Borde verde */
+  border-radius: 15px; /* Radio del borde */
+  color: #28a745; /* Letras verdes */
+}
+
+.table-custom th,
+.table-custom td {
+  border: 1px solid #28a745; /* Borde verde para celdas */
+}
+
+.table-custom .thead-dark th {
+  background-color: #28a745; /* Fondo verde para títulos */
+  color: #000; /* Texto negro */
+}
+
+.btn-custom {
+  border-color: #28a745; /* Borde verde */
+  color: white; /* Texto blanco */
+  background-color: #28a745; /* Fondo verde */
+}
+
+.btn-custom:hover {
+  background-color: #218838; /* Fondo verde oscuro al pasar el mouse */
+  border-color: #1e7e34; /* Borde verde oscuro al pasar el mouse */
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #28a745;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  color: #218838;
+}
