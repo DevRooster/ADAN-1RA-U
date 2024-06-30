@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-public class Historial_Académico {
+public class Historial_Academico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -20,6 +20,6 @@ public class Historial_Académico {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "estudiante_id", nullable = false)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "historialAcadémicos"})
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "historialAcademicos"})
     private Estudiante estudiante;
 }

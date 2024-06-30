@@ -10,6 +10,8 @@ import FormMatricula from './pages/FormMatricula'
 import FormDocente from './pages/FormDocente'
 import Curso from './pages/Curso'
 import FormCurso from './pages/FormCurso'
+import Estudiante from './pages/Estudiante'
+import FormEstudiante from './pages/FormEstudiante'
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path='/docente/form' element={<FormDocente/>}/>
         <Route path='/curso' element={<Curso/>}/>
         <Route path='/curso/form' element={<FormCurso/>}/>
+        <Route path='/estudiante' element={<Estudiante/>}/>
+        <Route path='/estudiante/form' element={<FormEstudiante/>}/>
       </Routes>
     </Router>
   );
