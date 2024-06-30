@@ -15,31 +15,31 @@ import java.util.Optional;
 @Service
 public class Historial_AcadémicoServiceImpl implements Historial_AcadémicoService {
     @Autowired
-    private Historial_AcadémicoRepository historialAcadémicoRepository;
+    private Historial_AcadémicoRepository historialacademicoRepository;
 
     @Override
     public List<Historial_Académico> lista() {
-        return historialAcadémicoRepository.findAll();
+        return historialacademicoRepository.findAll();
     }
 
     @Override
     public Historial_Académico guardar(Historial_Académico historial_académico) {
-        return historialAcadémicoRepository.save(historial_académico);
+        return historialacademicoRepository.save(historial_académico);
     }
 
     @Override
     public Optional<Historial_Académico> buscarPorId(Integer id) {
-        return historialAcadémicoRepository.findById(id);
+        return historialacademicoRepository.findById(id);
     }
 
     @Override
     public Historial_Académico actualizar(Historial_Académico historial_académico) {
-        return historialAcadémicoRepository.save(historial_académico);
+        return historialacademicoRepository.save(historial_académico);
     }
 
     @Override
     public void eleminar(Integer id) {
-        historialAcadémicoRepository.deleteById(id);
+        historialacademicoRepository.deleteById(id);
 
     }
 }

@@ -24,6 +24,4 @@ public class Estudiante {
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "estudiante"})
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "estudiante")
     private List<Historial_Académico> historialAcadémicos;
-
-
 }

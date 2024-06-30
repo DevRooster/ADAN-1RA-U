@@ -30,7 +30,7 @@ spring:
         - id: ms-gestionestudiantes-service
           uri: lb://ms-gestionestudiantes-service
           predicates:
-            - Path=/estudiante/**, /historial/**
+            - Path=/estudiante/**, /historialacademico/**
         - id: ms-gestiondocentes-service
           uri: lb://ms-gestiondocentes-service
           predicates:

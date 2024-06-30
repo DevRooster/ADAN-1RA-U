@@ -1,4 +1,5 @@
-package com.example.msmatricula.service.impl;
+package com.example.msmatricula.service.Impl;
+
 
 import com.example.msmatricula.entity.Horario;
 import com.example.msmatricula.repository.HorarioRepository;

@@ -9,34 +9,34 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/historial")
+@RequestMapping("/historialacademico")
 public class Historial_AcadémicoController {
     @Autowired
-    private Historial_AcadémicoService historialAcadémicoService;
+    private Historial_AcadémicoService historialacademicoService;
 
     @GetMapping
     ResponseEntity<List<Historial_Académico>> lista(){
-        return ResponseEntity.ok(historialAcadémicoService.lista());
+        return ResponseEntity.ok(historialacademicoService.lista());
     }
     @PostMapping
     ResponseEntity<Historial_Académico> guardar(@RequestBody Historial_Académico historial_académico){
-        return ResponseEntity.ok(historialAcadémicoService.guardar((historial_académico)));
+        return ResponseEntity.ok(historialacademicoService.guardar((historial_académico)));
     }
 
     @GetMapping("/{id}")
     ResponseEntity<Historial_Académico> buscarPorId(@PathVariable(required = true) Integer id){
-        return ResponseEntity.ok(historialAcadémicoService.buscarPorId(id).get());
+        return ResponseEntity.ok(historialacademicoService.buscarPorId(id).get());
 
     }
 
     @PutMapping
     ResponseEntity<Historial_Académico> actualizar(@RequestBody Historial_Académico historial_académico){
-        return ResponseEntity.ok(historialAcadémicoService.actualizar((historial_académico)));
+        return ResponseEntity.ok(historialacademicoService.actualizar((historial_académico)));
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<List<Historial_Académico>> eleminar(@PathVariable(required = true) Integer id){
-        historialAcadémicoService.eleminar(id);
-        return ResponseEntity.ok(historialAcadémicoService.lista());
+        historialacademicoService.eleminar(id);
+        return ResponseEntity.ok(historialacademicoService.lista());
 
     }
 }
