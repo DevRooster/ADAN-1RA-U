@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/historialacadémico")
+@RequestMapping("/historial")
 public class Historial_AcadémicoController {
     @Autowired
     private Historial_AcadémicoService historialAcadémicoService;

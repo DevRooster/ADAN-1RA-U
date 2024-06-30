@@ -21,10 +21,8 @@ public class Estudiante {
     private String email;
     private String gradoActual;
 
-
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "estudiante_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "estudiante"})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "estudiante")
     private List<Historial_Académico> historialAcadémicos;
 
 

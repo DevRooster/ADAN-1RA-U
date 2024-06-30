@@ -1,5 +1,4 @@
-package com.example.msmatricula.service.Impl;
-
+package com.example.msmatricula.service.impl;
 
 import com.example.msmatricula.dto.EstudianteDto;
 import com.example.msmatricula.entity.Horario;
