@@ -36,6 +36,7 @@ const Navbar = () => {
                         <NavItem label="Docente" to="/docente" />
                         <NavItem label="Curso" to="/curso" />
                         <NavItem label="Estudiante" to="/estudiante" />
+                        <NavItem label="Historial" to="/historial" />
                         <NavItem label="Asistencia" to="/asistencia" />
                         <NavItem label="Reporte" to="/reporte" />
                     </ul>

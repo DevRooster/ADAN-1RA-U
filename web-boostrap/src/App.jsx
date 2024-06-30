@@ -12,6 +12,8 @@ import Curso from './pages/Curso'
 import FormCurso from './pages/FormCurso'
 import Estudiante from './pages/Estudiante'
 import FormEstudiante from './pages/FormEstudiante'
+import Historial from './pages/Historial'
+import FormHistorial from './pages/FormHistorial'
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path='/curso/form' element={<FormCurso/>}/>
         <Route path='/estudiante' element={<Estudiante/>}/>
         <Route path='/estudiante/form' element={<FormEstudiante/>}/>
+        <Route path='/historial' element={<Historial/>}/>
+        <Route path='/historial/form' element={<FormHistorial/>}/>
       </Routes>
     </Router>
   );
