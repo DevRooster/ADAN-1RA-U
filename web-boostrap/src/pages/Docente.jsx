@@ -46,7 +46,7 @@ const Docente = () => {
                     <button className="btn btn-primary btn-custom" onClick={handleNew}>Nuevo</button>
                 </div>
                 <div className="table-responsive">
-                    <table className="table table-striped table-bordered table-hover">
+                    <table className="table table-striped  table-hover">
                         <thead className="thead-dark">
                             <tr>
                                 <th scope="col">#</th>

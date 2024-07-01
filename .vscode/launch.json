@@ -74,6 +74,16 @@
             "projectName": "ms-matricula",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsMonitoreoAsistenciaApplication<ms-monitoreo_asistencial>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.msmonitoreo_asistencia.MsMonitoreoAsistenciaApplication",
+            "projectName": "ms-monitoreo_asistencial",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
