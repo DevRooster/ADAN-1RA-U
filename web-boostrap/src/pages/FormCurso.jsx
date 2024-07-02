@@ -63,9 +63,11 @@ const FormCurso = () => {
             <div className="container mt-4">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
-                        <div className="card border-success">
-                            <div className="card-body bg-dark text-light">
-                                <h2 className="card-title text-success mb-4">Nuevo Curso</h2>
+                        <div className="card border-light shadow-lg">
+                            <div className="card-header bg-success text-white">
+                                <h2 className="card-title mb-0">Nuevo Curso</h2>
+                            </div>
+                            <div className="card-body bg-white">
                                 {isLoading && (
                                     <div className="alert alert-info" role="alert">
                                         Procesando... por favor espera.
@@ -83,30 +85,30 @@ const FormCurso = () => {
                                 )}
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-3">
-                                        <label htmlFor="nombreCurso" className="form-label text-light">Nombre del Curso</label>
+                                        <label htmlFor="nombreCurso" className="form-label text-dark">Nombre del Curso</label>
                                         <select
-                                            className="form-select bg-dark text-light border-success"
+                                            className="form-select border-success"
                                             id="nombreCurso"
                                             value={nombreCurso}
                                             onChange={(e) => setNombreCurso(e.target.value)}
                                             required
                                         >
-                                            <option value="">Selecciona un curso...</option>
+                                            <option value=""disabled>Selecciona un curso...</option>
                                             <option value="Matematicas">Matemáticas</option>
                                             <option value="Comunicacion">Comunicación</option>
                                             <option value="EdFisica">Ed. Física</option>
                                         </select>
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="horasAcademicas" className="form-label text-light">Horas Académicas</label>
+                                        <label htmlFor="horasAcademicas" className="form-label text-dark">Horas Académicas</label>
                                         <select
-                                            className="form-select bg-dark text-light border-success"
+                                            className="form-select border-success"
                                             id="horasAcademicas"
                                             value={horasAcademicas}
                                             onChange={(e) => setHorasAcademicas(e.target.value)}
                                             required
                                         >
-                                            <option value="">Selecciona horas...</option>
+                                            <option value=""disabled>Selecciona horas...</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -114,15 +116,15 @@ const FormCurso = () => {
                                         </select>
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="docente" className="form-label text-light">Docente</label>
+                                        <label htmlFor="docente" className="form-label text-dark">Docente</label>
                                         <select
-                                            className="form-select bg-dark text-light border-success"
+                                            className="form-select border-success"
                                             id="docente"
                                             value={selectedDocente}
                                             onChange={(e) => setSelectedDocente(e.target.value)}
                                             required
                                         >
-                                            <option value="">Selecciona un docente...</option>
+                                            <option value=""disabled>Selecciona un docente...</option>
                                             {docentes.map(docente => (
                                                 <option key={docente.id} value={docente.id}>
                                                     {docente.nombreCompleto}

@@ -91,9 +91,11 @@ const FormHistorial = () => {
             <div className="container mt-4">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
-                        <div className="card border-success">
-                            <div className="card-body">
-                                <h2 className="card-title text-success mb-4">Nuevo Historial</h2>
+                        <div className="card border-light shadow-lg">
+                            <div className="card-header bg-success text-white">
+                                <h2 className="card-title mb-0">Nuevo Historial</h2>
+                            </div>
+                            <div className="card-body bg-white">
                                 {isLoading && (
                                     <div className="alert alert-info" role="alert">
                                         Procesando... por favor espera.
@@ -111,87 +113,93 @@ const FormHistorial = () => {
                                 )}
                                 <form onSubmit={handleSubmit}>
                                     <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="mb-3">
-                                                <label htmlFor="institucion" className="form-label">Institución</label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    id="institucion"
-                                                    name="institucion"
-                                                    value={formData.institucion}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="promedio" className="form-label">Promedio</label>
-                                                <input
-                                                    type="number"
-                                                    step="0.01"
-                                                    className="form-control"
-                                                    id="promedio"
-                                                    name="promedio"
-                                                    value={formData.promedio}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="observaciones" className="form-label">Observaciones</label>
-                                                <textarea
-                                                    className="form-control"
-                                                    id="observaciones"
-                                                    name="observaciones"
-                                                    value={formData.observaciones}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
+                                        <div className="col-md-6 mb-3">
+                                            <label htmlFor="institucion" className="form-label text-dark">Institución</label>
+                                            <input
+                                                type="text"
+                                                className="form-control border-success"
+                                                id="institucion"
+                                                name="institucion"
+                                                placeholder='Ingrese la Institucion...'
+                                                value={formData.institucion}
+                                                onChange={handleChange}
+                                                required
+                                            />
                                         </div>
-                                        <div className="col-md-6">
-                                            <div className="mb-3">
-                                                <label htmlFor="fechaInicio" className="form-label">Fecha de Inicio</label>
-                                                <input
-                                                    type="date"
-                                                    className="form-control"
-                                                    id="fechaInicio"
-                                                    name="fechaInicio"
-                                                    value={formData.fechaInicio}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="fechaFin" className="form-label">Fecha de Fin</label>
-                                                <input
-                                                    type="date"
-                                                    className="form-control"
-                                                    id="fechaFin"
-                                                    name="fechaFin"
-                                                    value={formData.fechaFin}
-                                                    onChange={handleChange}
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="estudiante_id" className="form-label">Estudiante</label>
-                                                <select
-                                                    className="form-select"
-                                                    id="estudiante_id"
-                                                    name="estudiante_id"
-                                                    value={formData.estudiante_id}
-                                                    onChange={handleChange}
-                                                    required
-                                                >
-                                                    <option value="">Selecciona un estudiante...</option>
-                                                    {estudiantes.map(estudiante => (
-                                                        <option key={estudiante.id} value={estudiante.id}>
-                                                            {estudiante.nombre}
-                                                        </option>
-                                                    ))}
-                                                </select>
-                                            </div>
+                                        <div className="col-md-6 mb-3">
+                                            <label htmlFor="promedio" className="form-label text-dark">Promedio</label>
+                                            <input
+                                                type="number"
+                                                min="1"
+                                                max="20"
+                                                className="form-control border-success"
+                                                id="promedio"
+                                                name="promedio"
+                                                placeholder='Ingrese el promedio...'
+                                                value={formData.promedio}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-12 mb-3">
+                                            <label htmlFor="observaciones" className="form-label text-dark">Observaciones</label>
+                                            <textarea
+                                                className="form-control border-success"
+                                                id="observaciones"
+                                                name="observaciones"
+                                                placeholder='Observaciones...'
+                                                value={formData.observaciones}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6 mb-3">
+                                            <label htmlFor="fechaInicio" className="form-label text-dark">Fecha de Inicio</label>
+                                            <input
+                                                type="date"
+                                                className="form-control border-success"
+                                                id="fechaInicio"
+                                                name="fechaInicio"
+                                                value={formData.fechaInicio}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="col-md-6 mb-3">
+                                            <label htmlFor="fechaFin" className="form-label text-dark">Fecha de Fin</label>
+                                            <input
+                                                type="date"
+                                                className="form-control border-success"
+                                                id="fechaFin"
+                                                name="fechaFin"
+                                                value={formData.fechaFin}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-12 mb-3">
+                                            <label htmlFor="estudiante_id" className="form-label text-dark">Estudiante</label>
+                                            <select
+                                                className="form-select border-success"
+                                                id="estudiante_id"
+                                                name="estudiante_id"
+                                                value={formData.estudiante_id}
+                                                onChange={handleChange}
+                                                required
+                                            >
+                                                <option value="" disabled>Selecciona un estudiante...</option>
+                                                {estudiantes.map(estudiante => (
+                                                    <option key={estudiante.id} value={estudiante.id}>
+                                                        {estudiante.nombre}
+                                                    </option>
+                                                ))}
+                                            </select>
                                         </div>
                                     </div>
                                     <div className="d-flex justify-content-end mt-4">

@@ -40,13 +40,16 @@ const Docente = () => {
 
     return (
         <MainLayout>
-            <div className="container-fluid mt-4">
+            <div className="container mt-4">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h2 className="text-success">Docentes</h2>
-                    <button className="btn btn-primary btn-custom" onClick={handleNew}>Nuevo</button>
+                    <button className="btn btn-success" onClick={handleNew}>
+                        <i className="bi bi-plus-circle me-1"></i>
+                        Nuevo
+                    </button>
                 </div>
                 <div className="table-responsive">
-                    <table className="table table-striped  table-hover">
+                    <table className="table table table-hover">
                         <thead className="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
@@ -71,7 +74,7 @@ const Docente = () => {
                                     <td>{docente.especialidad}</td>
                                     <td>
                                         <button
-                                            className="action-btn ms-2"
+                                            className="btn btn-danger btn-sm"
                                             onClick={() => handleDelete(docente.id)}
                                         >
                                             <FontAwesomeIcon icon={faTrashAlt} />

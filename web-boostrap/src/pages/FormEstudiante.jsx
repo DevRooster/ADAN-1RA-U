@@ -10,8 +10,8 @@ const FormEstudiante = () => {
     const [direccion, setDireccion] = useState('');
     const [telefono, setTelefono] = useState('');
     const [email, setEmail] = useState('');
-    const [gradoActual, setGradoActual] = useState(''); // Estado para el grado actual
-    const [isLoading, setIsLoading] = useState(false); // Estado para controlar la carga
+    const [gradoActual, setGradoActual] = useState(''); 
+    const [isLoading, setIsLoading] = useState(false); 
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
@@ -22,33 +22,30 @@ const FormEstudiante = () => {
         const nuevoEstudiante = {
             nombre: nombre,
             fechaNacimiento: fechaNacimiento,
-            dni: dni, // Utiliza 'dni' en lugar de 'DNI'
+            dni: dni, 
             direccion: direccion,
             telefono: telefono,
             email: email,
             gradoActual: gradoActual
         };
 
-        setIsLoading(true); // Activar el estado de carga
+        setIsLoading(true); 
 
         try {
-            // Mostrar mensaje de "Procesando" por 1 segundo
             setTimeout(async () => {
                 const response = await axios.post('http://localhost:82/estudiante', nuevoEstudiante);
                 console.log('Estudiante creado:', response.data);
                 setSuccessMessage('Estudiante creado correctamente.');
                 setErrorMessage('');
-                // Mostrar mensaje de éxito por 1 segundo antes de redirigir
                 setTimeout(() => {
                     navigate('/estudiante');
                 }, 1000);
-            }, 1000); // Esperar 1 segundo antes de enviar la solicitud
+            }, 1000); 
         } catch (error) {
             console.error('Error al crear estudiante:', error);
             setErrorMessage('Error al crear estudiante. Por favor, inténtalo de nuevo.');
             setSuccessMessage('');
         } finally {
-            // Desactivar el estado de carga después de la operación
             setIsLoading(false);
         }
     };
@@ -58,7 +55,7 @@ const FormEstudiante = () => {
     };
 
     const handleTelefonoChange = (e) => {
-        const value = e.target.value.replace(/\D/g, ''); // Solo permite dígitos
+        const value = e.target.value.replace(/\D/g, ''); 
         setTelefono(value);
     };
 
@@ -67,9 +64,11 @@ const FormEstudiante = () => {
             <div className="container mt-4">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
-                        <div className="card border-success">
-                            <div className="card-body bg-dark text-light">
-                                <h2 className="card-title text-success mb-4">Nuevo Estudiante</h2>
+                        <div className="card border-light shadow-lg">
+                            <div className="card-header bg-success text-white">
+                                <h2 className="card-title mb-0">Nuevo Estudiante</h2>
+                            </div>
+                            <div className="card-body bg-white">
                                 {isLoading && (
                                     <div className="alert alert-info" role="alert">
                                         Procesando... por favor espera.
@@ -88,19 +87,20 @@ const FormEstudiante = () => {
                                 <form onSubmit={handleSubmit}>
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="nombre" className="form-label text-light">Nombre</label>
+                                            <label htmlFor="nombre" className="form-label text-dark">Nombre</label>
                                             <input
                                                 type="text"
                                                 className="form-control border-success"
                                                 id="nombre"
                                                 name="nombre"
+                                                placeholder='Nombre Completo...'
                                                 value={nombre}
                                                 onChange={(e) => setNombre(e.target.value)}
                                                 required
                                             />
                                         </div>
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="fechaNacimiento" className="form-label text-light">Fecha de Nacimiento</label>
+                                            <label htmlFor="fechaNacimiento" className="form-label text-dark">Fecha de Nacimiento</label>
                                             <input
                                                 type="date"
                                                 className="form-control border-success"
@@ -114,24 +114,26 @@ const FormEstudiante = () => {
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="dni" className="form-label text-light">DNI</label>
+                                            <label htmlFor="dni" className="form-label text-dark">N°Documento de Identidad</label>
                                             <input
                                                 type="text"
                                                 className="form-control border-success"
                                                 id="dni"
                                                 name="dni"
+                                                placeholder='Ingresa tu DNI...'
                                                 value={dni}
                                                 onChange={(e) => setDni(e.target.value)}
                                                 required
                                             />
                                         </div>
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="direccion" className="form-label text-light">Dirección</label>
+                                            <label htmlFor="direccion" className="form-label text-dark">Dirección</label>
                                             <input
                                                 type="text"
                                                 className="form-control border-success"
                                                 id="direccion"
                                                 name="direccion"
+                                                placeholder='Ingresa tu Direccion...'
                                                 value={direccion}
                                                 onChange={(e) => setDireccion(e.target.value)}
                                                 required
@@ -140,24 +142,26 @@ const FormEstudiante = () => {
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="telefono" className="form-label text-light">Teléfono</label>
+                                            <label htmlFor="telefono" className="form-label text-dark">Teléfono</label>
                                             <input
                                                 type="text"
                                                 className="form-control border-success"
                                                 id="telefono"
                                                 name="telefono"
+                                                placeholder='Ingresa tu Telefono...'
                                                 value={telefono}
                                                 onChange={handleTelefonoChange}
                                                 required
                                             />
                                         </div>
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="email" className="form-label text-light">E-mail</label>
+                                            <label htmlFor="email" className="form-label text-dark">E-mail</label>
                                             <input
                                                 type="email"
                                                 className="form-control border-success"
                                                 id="email"
                                                 name="email"
+                                                placeholder='Ingresa tu Correo...'
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 required
@@ -166,7 +170,7 @@ const FormEstudiante = () => {
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="gradoActual" className="form-label text-light">Grado Actual</label>
+                                            <label htmlFor="gradoActual" className="form-label text-dark">Grado Actual</label>
                                             <select
                                                 className="form-select border-success"
                                                 id="gradoActual"
@@ -175,7 +179,7 @@ const FormEstudiante = () => {
                                                 onChange={(e) => setGradoActual(e.target.value)}
                                                 required
                                             >
-                                                <option value="">Selecciona el Grado Actual</option>
+                                                <option value="" disabled>Selecciona el Grado Actual</option>
                                                 <option value="4 Años">4 Años</option>
                                                 <option value="5 Años">5 Años</option>
                                                 <option value="6 Años">6 Años</option>

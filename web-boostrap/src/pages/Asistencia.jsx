@@ -80,93 +80,87 @@ const Asistencia = () => {
     const renderEstudiantesPorGrado = () => {
         const gradosOrdenados = ['4 Años', '5 Años', '6 Años'];
         return gradosOrdenados.map(grado => (
-            <div key={grado} className="col-md-6 mb-4">
-                <h3>{`Grado: ${grado}`}</h3>
-                {estudiantes[grado] && (
-                    <>
-                        <div className="table-responsive">
-                            <table className="table table-striped table-hover">
-                                <thead className="thead-dark">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Estudiante</th>
-                                        <th scope="col">Fecha</th>
-                                        <th scope="col">Asistencia</th>
-                                        <th scope="col">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {estudiantes[grado].slice(indexOfFirstStudent, indexOfLastStudent).map(estudiante => (
-                                        <tr key={estudiante.id}>
-                                            <td>{estudiante.id}</td>
-                                            <td>{estudiante.nombre}</td>
-                                            <td>
-                                                <input
-                                                    type="date"
-                                                    className="form-control"
-                                                    value={selectedDate}
-                                                    onChange={(e) => setSelectedDate(e.target.value)}
-                                                />
-                                            </td>
-                                            <td>
-                                                <div className="form-check">
-                                                    <input
-                                                        className="form-check-input"
-                                                        type="radio"
-                                                        name={`asistencia-${estudiante.id}`}
-                                                        value="presente"
-                                                        checked={selectedAsistencia[estudiante.id] === 'presente'}
-                                                        onChange={() => handleAsistenciaChange(estudiante.id, 'presente')}
-                                                    />
-                                                    <label className="form-check-label" htmlFor={`asistencia-presente-${estudiante.id}`}>
-                                                        Presente
-                                                    </label>
-                                                </div>
-                                                <div className="form-check">
-                                                    <input
-                                                        className="form-check-input"
-                                                        type="radio"
-                                                        name={`asistencia-${estudiante.id}`}
-                                                        value="tarde"
-                                                        checked={selectedAsistencia[estudiante.id] === 'tarde'}
-                                                        onChange={() => handleAsistenciaChange(estudiante.id, 'tarde')}
-                                                    />
-                                                    <label className="form-check-label" htmlFor={`asistencia-tarde-${estudiante.id}`}>
-                                                        Tarde
-                                                    </label>
-                                                </div>
-                                                <div className="form-check">
-                                                    <input
-                                                        className="form-check-input"
-                                                        type="radio"
-                                                        name={`asistencia-${estudiante.id}`}
-                                                        value="falta"
-                                                        checked={selectedAsistencia[estudiante.id] === 'falta'}
-                                                        onChange={() => handleAsistenciaChange(estudiante.id, 'falta')}
-                                                    />
-                                                    <label className="form-check-label" htmlFor={`asistencia-falta-${estudiante.id}`}>
-                                                        Falta
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button 
-                                                    className="btn btn-success" 
-                                                    onClick={() => handleSave(estudiante)}
-                                                    disabled={loading[estudiante.id]}
-                                                >
-                                                    {loading[estudiante.id] ? 'Guardando...' : 'Guardar'}
-                                                </button>
-                                                {success[estudiante.id] && <span className="text-success ms-2">Guardado!</span>}
-                                            </td>
+            <div key={grado} className="col-lg-4 col-md-6 mb-4">
+                <div className="card border-light shadow-sm">
+                    <div className="card-header bg-success text-white">
+                        <h3 className="card-title mb-0">{`Grado: ${grado}`}</h3>
+                    </div>
+                    <div className="card-body">
+                        {estudiantes[grado] && (
+                            <div className="table-responsive">
+                                <table className="table table-striped table-hover table-sm">
+                                    <thead className="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Estudiante</th>
+                                            <th scope="col">Asistencia</th>
+                                            <th scope="col">Acciones</th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                        {/* Aquí puedes agregar la paginación si es necesario */}
-                    </>
-                )}
+                                    </thead>
+                                    <tbody>
+                                        {estudiantes[grado].slice(indexOfFirstStudent, indexOfLastStudent).map(estudiante => (
+                                            <tr key={estudiante.id}>
+                                                <td>{estudiante.id}</td>
+                                                <td>{estudiante.nombre}</td>
+                                                <td>
+                                                    <div className="form-check form-check-inline">
+                                                        <input
+                                                            className="form-check-input"
+                                                            type="radio"
+                                                            name={`asistencia-${estudiante.id}`}
+                                                            value="presente"
+                                                            checked={selectedAsistencia[estudiante.id] === 'presente'}
+                                                            onChange={() => handleAsistenciaChange(estudiante.id, 'presente')}
+                                                        />
+                                                        <label className="form-check-label" htmlFor={`asistencia-presente-${estudiante.id}`}>
+                                                            Presente
+                                                        </label>
+                                                    </div>
+                                                    <div className="form-check form-check-inline">
+                                                        <input
+                                                            className="form-check-input"
+                                                            type="radio"
+                                                            name={`asistencia-${estudiante.id}`}
+                                                            value="tarde"
+                                                            checked={selectedAsistencia[estudiante.id] === 'tarde'}
+                                                            onChange={() => handleAsistenciaChange(estudiante.id, 'tarde')}
+                                                        />
+                                                        <label className="form-check-label" htmlFor={`asistencia-tarde-${estudiante.id}`}>
+                                                            Tarde
+                                                        </label>
+                                                    </div>
+                                                    <div className="form-check form-check-inline">
+                                                        <input
+                                                            className="form-check-input"
+                                                            type="radio"
+                                                            name={`asistencia-${estudiante.id}`}
+                                                            value="falta"
+                                                            checked={selectedAsistencia[estudiante.id] === 'falta'}
+                                                            onChange={() => handleAsistenciaChange(estudiante.id, 'falta')}
+                                                        />
+                                                        <label className="form-check-label" htmlFor={`asistencia-falta-${estudiante.id}`}>
+                                                            Falta
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button 
+                                                        className="btn btn-success btn-sm" 
+                                                        onClick={() => handleSave(estudiante)}
+                                                        disabled={loading[estudiante.id]}
+                                                    >
+                                                        {loading[estudiante.id] ? 'Guardando...' : 'Guardar'}
+                                                    </button>
+                                                    {success[estudiante.id] && <span className="text-success ms-2">Guardado!</span>}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
         ));
     };

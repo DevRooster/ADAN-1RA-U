@@ -45,7 +45,7 @@ const Curso = () => {
                     <button className="btn btn-primary btn-custom" onClick={handleNew}>Nuevo</button>
                 </div>
                 <div className="table-responsive">
-                    <table className="table table-striped table-hover">
+                    <table className="table table table-hover">
                         <thead className="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
@@ -64,7 +64,7 @@ const Curso = () => {
                                     <td>{curso.detallesDocente.nombreCompleto}</td>
                                     <td>
                                         <button
-                                            className="action-btn ms-2"
+                                            className="btn btn-danger ms-2"
                                             onClick={() => handleDelete(curso.id)}
                                         >
                                             <FontAwesomeIcon icon={faTrashAlt} />
