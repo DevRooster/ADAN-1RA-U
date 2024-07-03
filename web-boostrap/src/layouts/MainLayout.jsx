@@ -5,13 +5,16 @@ const MainLayout = ({ children }) => {
     return (
         <div>
             <Navbar />
-            <div className="container-fluid p-0" style={{ margin: 0, minHeight: '100vh', overflowX: 'hidden' }}>
-                <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4 mx-auto" style={{ margin: 0, width: '100%', minHeight: '100%' }}>
+            <div className="sliding-text-container">
+                <div className="sliding-text">Desarrollo de Aplicaciones Distribuidas</div>
+            </div>
+            <div className="container-fluid p-0 main-content">
+                <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4 mx-auto">
                     {children}
                 </main>
             </div>
         </div>
     );
-}
+};
 
 export default MainLayout;

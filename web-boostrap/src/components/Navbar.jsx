@@ -1,20 +1,17 @@
-import React from 'react'
-import { useNavigate, Link, useLocation } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../App.css'
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-    const navigate = useNavigate();
     const location = useLocation();
 
     const handleBackClick = () => {
-        navigate('/'); // Cambia '/' por la ruta de tu página de inicio de sesión si es diferente
+        // Manejar la navegación atrás según tu lógica
     };
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <Link className="navbar-brand text-success" to="/dashboard">Dashboard</Link>
+                <Link className="navbar-brand" to="/dashboard">Micro System</Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -37,11 +34,7 @@ const Navbar = () => {
                         <NavItem label="Asistencia" to="/asistencia" active={location.pathname === '/asistencia'} />
                         <NavItem label="Reporte" to="/reporte" active={location.pathname === '/reporte'} />
                     </ul>
-                    <button
-                        className="btn btn-outline-danger ms-auto"
-                        type="button"
-                        onClick={handleBackClick}
-                    >
+                    <button className="btn btn-outline-danger ms-auto" type="button" onClick={handleBackClick}>
                         Exit
                     </button>
                 </div>
@@ -60,4 +53,4 @@ const NavItem = ({ label, to, active }) => {
     );
 };
 
-export default Navbar
+export default Navbar;
