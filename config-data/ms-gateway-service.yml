@@ -35,6 +35,8 @@ spring:
           uri: lb://ms-gestiondocentes-service
           predicates:
             - Path=/asignatura/**, /docente/**
+          filters:
+            - AuthFilter
         - id: ms-monitoreoasistencia-service
           uri: lb://ms-monitoreoasistencia-service
           predicates:
@@ -47,12 +49,7 @@ spring:
           uri: lb://ms-auth-service
           predicates:
             - Path=/auth/**
-        - id: ms-matriculas-service
-          uri: lb://ms-matriculas-service
-          predicates:
-            - Path=/horarios/**, /matriculas/**
-          filters:
-            - AuthFilter
+
 
 
 
