@@ -70,7 +70,7 @@ public class UserExcelExporter {
             createCell(row, columnCount++, matricula.getId(), style);
             createCell(row, columnCount++, matricula.getFechaMatricula(), style);
             createCell(row, columnCount++, matricula.getEstado(), style);
-            createCell(row, columnCount++, matricula.getEstudianteId(), style);
+            createCell(row, columnCount++, matricula.getEstudiante(), style);
         }
     }
 

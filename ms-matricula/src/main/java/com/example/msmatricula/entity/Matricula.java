@@ -1,12 +1,9 @@
 package com.example.msmatricula.entity;
 
-import com.example.msmatricula.dto.EstudianteDto;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Data
 @Entity
@@ -15,13 +12,8 @@ public class Matricula {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDate fechaMatricula;
-    private String estado;
-    private Integer estudianteId;
+    private String estudiante; // nombre; estudiante
+    private String estado; //Matricula, No matriculado
+    private String gradoActual; //4,5,6 Años
 
-    @Transient
-    private EstudianteDto estudianteDto ;
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "hoarario_id")
-    private List<Horario> detallehorario;
 }

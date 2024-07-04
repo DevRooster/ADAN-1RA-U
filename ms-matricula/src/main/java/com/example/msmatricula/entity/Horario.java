@@ -1,11 +1,8 @@
 package com.example.msmatricula.entity;
 
-import com.example.msmatricula.dto.EstudianteDto;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.List;
 
 @Data
 @Entity
@@ -13,14 +10,9 @@ public class Horario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String curso;
-    private String descripcion;
-    private String GradoDesigando;
-    private Integer estudianteId;
-
-    @Transient
-    private EstudianteDto estudianteDto ;
-
-
+    private String curso; //Nombre del curso
+    private String docente; //Nombre del Docente
+    private String descripcion; // Aula
+    private String grado; //Grado 4,5,6 Años
 
 }

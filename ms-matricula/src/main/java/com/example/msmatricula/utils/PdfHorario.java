@@ -62,8 +62,8 @@ public class PdfHorario {
             table.addCell(new PdfPCell(new Phrase(String.valueOf(horario.getId()), normalFont)));
             table.addCell(new PdfPCell(new Phrase(horario.getCurso(), normalFont)));
             table.addCell(new PdfPCell(new Phrase(horario.getDescripcion(), normalFont)));
-            table.addCell(new PdfPCell(new Phrase(horario.getGradoDesigando(), normalFont)));
-            table.addCell(new PdfPCell(new Phrase(String.valueOf(horario.getEstudianteId()), normalFont)));
+            //table.addCell(new PdfPCell(new Phrase(horario.getGradoDesignado(), normalFont)));
+            //table.addCell(new PdfPCell(new Phrase(String.valueOf(horario.getEstudianteId()), normalFont)));
         }
 
         // Agregar tabla al documento

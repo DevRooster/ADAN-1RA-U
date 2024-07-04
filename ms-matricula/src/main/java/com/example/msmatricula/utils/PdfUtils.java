@@ -58,7 +58,7 @@ public class PdfUtils {
             table.addCell(new PdfPCell(new Phrase(String.valueOf(matricula.getId()), normalFont)));
             table.addCell(new PdfPCell(new Phrase(matricula.getFechaMatricula().toString(), normalFont)));
             table.addCell(new PdfPCell(new Phrase(matricula.getEstado(), normalFont)));
-            table.addCell(new PdfPCell(new Phrase(String.valueOf(matricula.getEstudianteId()), normalFont)));
+            table.addCell(new PdfPCell(new Phrase(String.valueOf(matricula.getEstudiante()), normalFont)));
         }
 
         // Agregar tabla al documento

@@ -1,10 +1,6 @@
 package com.example.msmatricula.service.impl;
 
-
-import com.example.msmatricula.dto.EstudianteDto;
-import com.example.msmatricula.entity.Horario;
 import com.example.msmatricula.entity.Matricula;
-import com.example.msmatricula.feign.EstudiantesFeign;
 import com.example.msmatricula.repository.MatriculaRepository;
 import com.example.msmatricula.service.MatriculaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +13,6 @@ import java.util.Optional;
 public class MatriculaServiceImpl implements MatriculaService {
     @Autowired
     private MatriculaRepository matriculaRepository;
-    @Autowired
-    private EstudiantesFeign estudiantesFeign;
 
 
     @Override
@@ -34,14 +28,6 @@ public class MatriculaServiceImpl implements MatriculaService {
 
     @Override
     public Optional<Matricula> buscarPorId(Integer id) {
-        Optional<Matricula> matricula = matriculaRepository.findById(id);
-        EstudianteDto estudianteDto = estudiantesFeign.buscarPorId(matricula.get().getEstudianteId()).getBody();
-        List<Horario> horarios = matricula.get().getDetallehorario().stream().map(horario -> {
-            horario.setEstudianteDto(estudiantesFeign.buscarPorId(horario.getEstudianteId()).getBody());
-            return horario;
-        }).toList();
-        matricula.get().setEstudianteDto(estudianteDto);
-        matricula.get().setDetallehorario(horarios);
         return matriculaRepository.findById(id);
     }
     @Override

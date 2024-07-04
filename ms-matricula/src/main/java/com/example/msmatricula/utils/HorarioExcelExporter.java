@@ -71,8 +71,8 @@ public class HorarioExcelExporter {
             createCell(row, columnCount++, horario.getId(), style);
             createCell(row, columnCount++, horario.getCurso(), style);
             createCell(row, columnCount++, horario.getDescripcion(), style);
-            createCell(row, columnCount++, horario.getGradoDesigando(), style);
-            createCell(row, columnCount++, horario.getEstudianteId(), style);
+           // createCell(row, columnCount++, horario.getGradoDesignado(), style);
+            //createCell(row, columnCount++, horario.getEstudianteId(), style);
 
         }
     }
