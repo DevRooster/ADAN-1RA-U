@@ -43,16 +43,16 @@ spring:
           uri: lb://ms-reporte-service
           predicates:
             - Path=/reportes/**
+        - id: ms-auth-service
+          uri: lb://ms-auth-service
+          predicates:
+            - Path=/auth/**
         - id: ms-matriculas-service
           uri: lb://ms-matriculas-service
           predicates:
             - Path=/horarios/**, /matriculas/**
           filters:
             - AuthFilter
-        - id: ms-auth-service
-          uri: lb://ms-auth-service
-          predicates:
-            - Path=/auth/**
 
 
 
