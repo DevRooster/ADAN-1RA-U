@@ -45,6 +45,7 @@ const Navbar = () => {
                                 Asistencia
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><Link className="dropdown-item" to="/asistencia">Agregar Asistencias</Link></li>
                                 <li><Link className="dropdown-item" to="/asistencia/tabla">Registros de Asistencias</Link></li>
                             </ul>
                         </li>
