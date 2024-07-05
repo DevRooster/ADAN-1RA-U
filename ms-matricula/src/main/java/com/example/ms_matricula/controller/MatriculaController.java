@@ -16,8 +16,8 @@ public class MatriculaController {
     private MatriculaService matriculaService;
 
     @GetMapping
-    public ResponseEntity<List<Matricula>> lista() {
-        return ResponseEntity.ok(matriculaService.lista());
+    public ResponseEntity<List<Matricula>> listar() {
+        return ResponseEntity.ok(matriculaService.listar());
     }
 
     @PostMapping
@@ -38,7 +38,7 @@ public class MatriculaController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<List<Matricula>> eleminar(@PathVariable(required = true) Integer id) {
-        matriculaService.eleminar(id);
-        return ResponseEntity.ok(matriculaService.lista());
+        matriculaService.eliminar(id);
+        return ResponseEntity.ok(matriculaService.listar());
     }
 }

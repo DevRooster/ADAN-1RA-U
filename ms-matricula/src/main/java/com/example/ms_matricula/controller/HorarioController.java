@@ -17,8 +17,8 @@ public class HorarioController {
     private HorarioService horarioService;
 
     @GetMapping
-    public ResponseEntity<List<Horario>> lista() {
-        return ResponseEntity.ok(horarioService.lista());
+    public ResponseEntity<List<Horario>> listar() {
+        return ResponseEntity.ok(horarioService.listar());
     }
 
     @PostMapping
@@ -39,7 +39,7 @@ public class HorarioController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<List<Horario>> eleminar(@PathVariable(required = true) Integer id) {
-        horarioService.eleminar(id);
-        return ResponseEntity.ok(horarioService.lista());
+        horarioService.eliminar(id);
+        return ResponseEntity.ok(horarioService.listar());
     }
 }

@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.ms_matricula.entity.Horario;
+
 import com.example.ms_matricula.repository.HorarioRepository;
+
 import com.example.ms_matricula.service.HorarioService;
 
 
@@ -17,7 +19,7 @@ public class HorarioServiceImpl implements HorarioService{
     private HorarioRepository horarioRepository;
 
     @Override
-    public List<Horario> lista() {
+    public List<Horario> listar() {
         return horarioRepository.findAll();
     }
 
@@ -37,8 +39,7 @@ public class HorarioServiceImpl implements HorarioService{
     }
 
     @Override
-    public void eleminar(Integer id) {
+    public void eliminar(Integer id) {
         horarioRepository.deleteById(id);
-
     }
 }
