@@ -10,9 +10,6 @@ const Matricula = () => {
 
     // Simulated data for the table
     const data = [
-        { id: 1, first: 'Mark', last: 'Otto', handle: '@mdo' },
-        { id: 2, first: 'Jacob', last: 'Thornton', handle: '@fat' },
-        { id: 3, first: 'Larry the Bird', last: 'Bird', handle: '@twitter' },
     ];
 
     const handleEdit = (id) => {
@@ -34,7 +31,7 @@ const Matricula = () => {
             <div className="container mt-4">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h2 className="text-success">Matrícula</h2>
-                    <button className="btn btn-primary btn-custom" onClick={handleNew}>New</button>
+                    <button className="btn btn-primary btn-custom" onClick={handleNew}>Nuevo</button>
                 </div>
                 <div className="table-responsive">
                     <table className="table table-striped-columns ">
