@@ -41,21 +41,28 @@ const Historial = () => {
     const handleGeneratePDF = (historial) => {
         const doc = new jsPDF();
 
-        // Construir el contenido del PDF como texto
-        const content = `
-            +---------------------------+
-            | Historial Académico |
-            +---------------------------+
-            Institución: ${historial.institucion}
-            Promedio: ${historial.promedio}
-            Observaciones: ${historial.observaciones}
-            Fecha Inicio: ${historial.fechaInicio}
-            Fecha Fin: ${historial.fechaFin}
-            Estudiante: ${historial.estudiante.nombre}
-        `;
+    // Set the document title
+    doc.setFontSize(16);
+    const title1 = "Institucion Educatica Inicial";
+    const title2 = "Historial Académico";
 
-        // Agregar el contenido al PDF
-        doc.text(content, 10, 10);
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const title1Width = doc.getStringUnitWidth(title1) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+    const title2Width = doc.getStringUnitWidth(title2) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+
+    doc.text(title1, (pageWidth - title1Width) / 2, 20);
+    doc.text(title2, (pageWidth - title2Width) / 2, 40);
+
+
+    // Student and institution details
+    doc.setFontSize(12);
+    doc.text(`Institución: ${historial.institucion}`, 20, 60);
+    doc.text(`Promedio: ${historial.promedio}`, 20, 70);
+    doc.text(`Observaciones: ${historial.observaciones}`, 20, 80);
+    doc.text(`Fecha Inicio: ${historial.fechaInicio}`, 20, 90);
+    doc.text(`Fecha Fin: ${historial.fechaFin}`, 20, 100);
+    doc.text(`Estudiante: ${historial.estudiante.nombre}`, 20, 110);
+    doc.text("_________________________________", 70, 140);
 
         // Descargar el PDF
         doc.save(`historial_${historial.id}.pdf`);
