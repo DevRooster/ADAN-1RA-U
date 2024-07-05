@@ -15,6 +15,7 @@ import FormEstudiante from './pages/FormEstudiante'
 import Historial from './pages/Historial'
 import FormHistorial from './pages/FormHistorial'
 import Asistencia from './pages/Asistencia'
+import AsistenciaTable from './pages/AsistenciaTable'
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
         <Route path='/historial' element={<Historial/>}/>
         <Route path='/historial/form' element={<FormHistorial/>}/>
         <Route path='/asistencia' element={<Asistencia/>}/>
+        <Route path='/asistencia/tabla' element={<AsistenciaTable/>}/>
+
       </Routes>
     </Router>
   );

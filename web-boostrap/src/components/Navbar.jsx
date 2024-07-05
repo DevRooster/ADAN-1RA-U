@@ -32,7 +32,22 @@ const Navbar = () => {
                         <NavItem label="Curso" to="/curso" active={location.pathname === '/curso'} />
                         <NavItem label="Estudiante" to="/estudiante" active={location.pathname === '/estudiante'} />
                         <NavItem label="Historial" to="/historial" active={location.pathname === '/historial'} />
-                        <NavItem label="Asistencia" to="/asistencia" active={location.pathname === '/asistencia'} />
+                        <li className="nav-item dropdown">
+                            <a
+                                className="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                style={{ cursor: 'pointer' }}
+                            >
+                                Asistencia
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><Link className="dropdown-item" to="/asistencia/tabla">Registros de Asistencias</Link></li>
+                            </ul>
+                        </li>
                         <NavItem label="Reporte" to="/reporte" active={location.pathname === '/reporte'} />
                     </ul>
                     <button className="btn btn-outline-danger ms-auto" type="button" onClick={handleBackClick}>

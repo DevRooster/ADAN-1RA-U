@@ -13,6 +13,7 @@ const Asistencia = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [studentsPerPage] = useState(5);
     const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
+    const [registrosAsistencia, setRegistrosAsistencia] = useState([]);
 
     useEffect(() => {
         const fetchEstudiantes = async () => {
@@ -33,7 +34,18 @@ const Asistencia = () => {
             }
         };
 
+        const fetchRegistrosAsistencia = async () => {
+            try {
+                const response = await axios.get('http://localhost:82/registroasistencia');
+                console.log('Registros de asistencia:', response.data);
+                setRegistrosAsistencia(response.data);
+            } catch (error) {
+                console.error('Error fetching registros de asistencia:', error);
+            }
+        };
+
         fetchEstudiantes();
+        fetchRegistrosAsistencia();
     }, []);
 
     const handleAsistenciaChange = (studentId, asistencia) => {
@@ -203,6 +215,8 @@ const Asistencia = () => {
                         ))}
                     </ul>
                 </nav>
+
+ 
             </div>
         </MainLayout>
     );
